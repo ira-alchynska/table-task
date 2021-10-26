@@ -201,11 +201,9 @@ img {
 opacity: 1;
 }
 
-.fa-square{
+.select{
   margin-left: 10px;
   margin-right: 10px;
   color: #3a3838;
-  width: 17px;
-  height: 17px;
-  font-size: larger;
+  cursor: pointer;
 }
