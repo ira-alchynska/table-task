@@ -1,0 +1,180 @@
+[
+    {
+        "id": 1,
+        "name": "Afghanistan",
+        "iso3": "AFG",
+        "numeric_code": "004",
+        "phone_code": "93",
+        "capital": "Kabul",
+        "currency": "AFN"
+    },
+    {
+        "id": 2,
+        "name": "Aland Islands",
+        "iso3": "ALA",
+        "numeric_code": "248",
+        "phone_code": "+358-18",
+        "capital": "Mariehamn",
+        "currency": "EUR"
+    },
+    {
+        "id": 3,
+        "name": "Albania",
+        "iso3": "ALB",
+        "numeric_code": "008",
+        "phone_code": "355",
+        "capital": "Tirana",
+        "currency": "ALL"
+    },
+    {
+        "id": 4,
+        "name": "Algeria",
+        "iso3": "DZA",
+        "numeric_code": "012",
+        "phone_code": "213",
+        "capital": "Algiers",
+        "currency": "DZD"
+    },
+    {
+        "id": 5,
+        "name": "American Samoa",
+        "iso3": "ASM",
+        "numeric_code": "016",
+        "phone_code": "+1-684",
+        "capital": "Pago Pago",
+        "currency": "USD"
+    },
+    {
+        "id": 6,
+        "name": "Andorra",
+        "iso3": "AND",
+        "numeric_code": "020",
+        "phone_code": "376",
+        "capital": "Andorra la Vella",
+        "currency": "EUR"
+    },
+    {
+        "id": 7,
+        "name": "Angola",
+        "iso3": "AGO",
+        "numeric_code": "024",
+        "phone_code": "244",
+        "capital": "Luanda",
+        "currency": "AOA"
+    },
+    {
+        "id": 8,
+        "name": "Anguilla",
+        "iso3": "AIA",
+        "numeric_code": "660",
+        "phone_code": "+1-264",
+        "capital": "The Valley"
+    },
+    {
+        "id": 9,
+        "name": "Antarctica",
+        "iso3": "ATA",
+        "numeric_code": "010",
+        "phone_code": "672",
+        "capital": "",
+        "currency": "AAD"
+    },
+    {
+        "id": 10,
+        "name": "Antigua And Barbuda",
+        "iso3": "ATG",
+        "numeric_code": "028",
+        "phone_code": "+1-268",
+        "capital": "St. John's",
+        "currency": "XCD"
+    },
+    {
+        "id": 11,
+        "name": "Argentina",
+        "iso3": "ARG",
+        "numeric_code": "032",
+        "phone_code": "54",
+        "capital": "Buenos Aires",
+        "currency": "ARS"
+    },
+    {
+        "id": 12,
+        "name": "Armenia",
+        "iso3": "ARM",
+        "numeric_code": "051",
+        "phone_code": "374",
+        "capital": "Yerevan",
+        "currency": "AMD"
+    },
+    {
+        "id": 13,
+        "name": "Aruba",
+        "iso3": "ABW",
+        "numeric_code": "533",
+        "phone_code": "297",
+        "capital": "Oranjestad",
+        "currency": "AWG"
+    },
+    {
+        "id": 14,
+        "name": "Australia",
+        "iso3": "AUS",
+        "numeric_code": "036",
+        "phone_code": "61",
+        "capital": "Canberra",
+        "currency": "AUD"
+    },
+    {
+        "id": 15,
+        "name": "Austria",
+        "iso3": "AUT",
+        "numeric_code": "040",
+        "phone_code": "43",
+        "capital": "Vienna",
+        "currency": "EUR"
+    },
+    {
+        "id": 16,
+        "name": "Azerbaijan",
+        "iso3": "AZE",
+        "numeric_code": "031",
+        "phone_code": "994",
+        "capital": "Baku",
+        "currency": "AZN"
+    },
+    {
+        "id": 17,
+        "name": "Bahamas The",
+        "iso3": "BHS",
+        "numeric_code": "044",
+        "phone_code": "+1-242",
+        "capital": "Nassau",
+        "currency": "BSD"
+    },
+    {
+        "id": 18,
+        "name": "Bahrain",
+        "iso3": "BHR",
+        "numeric_code": "048",
+        "phone_code": "973",
+        "capital": "Manama",
+        "currency": "BHD"
+    },
+    {
+        "id": 19,
+        "name": "Bangladesh",
+        "iso3": "BGD",
+        "numeric_code": "050",
+        "phone_code": "880",
+        "capital": "Dhaka",
+        "currency": "BDT"
+    },
+    {
+        "id": 20,
+        "name": "Barbados",
+        "iso3": "BRB",
+        "phone_code": "+1-246",
+        "capital": "Bridgetown",
+        "currency": "BBD"    
+    }
+]

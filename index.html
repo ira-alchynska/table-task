@@ -1,71 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Table-task</title>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="table">
-        <div class="header-box">
-          <ul class="header-list list">
-            <li class="header-item">Id</li>
-            <li class="header-item">Name</li>
-            <li class="header-item">Iso</li>
-            <li class="header-item">Phone code</li>
-            <li class="header-item">Currency</li>
-            <li class="header-item">Capital</li>
-            </ul>
+    <script src="https://kit.fontawesome.com/aa6f3bfe37.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="table">
+        <div class="header-row">
+          <i class="far fa-square"></i>
+            <div class="id-column id">Id</div>
+          <div class="hidden">
+            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+            <div class="header-item name">Name</div>
+            <div class="hidden">
+            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+            <div class="header-item iso">Iso</div>
+            <div class="hidden">
+            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+            <div class="header-item phone-code">Phone code</div>
+            <div class="hidden">
+            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+            <div class="header-item currency">Currency</div>
+            <div class="hidden">
+            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+            <div class="header-item capital">Capital</div>
+            <div class="hidden">
+            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
         </div>
         <div class="content-box">
-          <ul class="content-list list">
-            <li class="content-item">1</li>
-            <li class="content-item">Afghanistan</li>
-            <li class="content-item">AFG</li>
-            <li class="content-item">93</li>
-            <li class="content-item">AFN</li>
-            <li class="content-item">AFN</li>
-          </ul>
-          <ul class="content-list list">
-            <li class="content-item">2</li>
-            <li class="content-item">Aland Islands</li>
-            <li class="content-item">ALA</li>
-            <li class="content-item">+358-18</li>
-            <li class="content-item">EUR</li>
-            <li class="content-item">Mariehamn</li>
-          </ul>
-          <ul class="content-list list">
-            <li class="content-item">3</li>
-            <li class="content-item">Albania</li>
-            <li class="content-item">ALB</li>
-            <li class="content-item">355</li>
-            <li class="content-item">ALL</li>
-            <li class="content-item">Tirana</li>
-          </ul>
-          <ul class="content-list list">
-            <li class="content-item">4</li>
-            <li class="content-item">Algeria</li>
-            <li class="content-item">DZA</li>
-            <li class="content-item">213</li>
-            <li class="content-item">DZD</li>
-            <li class="content-item">Algiers</li>
-          </ul>
-          <ul class="content-list list">
-            <li class="content-item">5</li>
-            <li class="content-item">American Samoa</li>
-            <li class="content-item">ASM</li>
-            <li class="content-item">+1-684</li>
-            <li class="content-item">USD</li>
-            <li class="content-item">Pago Pago</li>
-          </ul>
+          <div class="content-list list">
+            <i class="far fa-square"></i>
+            <div class=" id-row">1</div>
+            <div class="content-item">Afghanistan</div>
+            <div class="content-item">AFG</div>
+            <div class="content-item">93</div>
+            <div class="content-item">AFN</div>
+            <div class="content-item">AFN</div>
+          </div>
+          <div class="content-list list">
+            <i class="far fa-square"></i>
+            <div class="id-row">2</div>
+            <div class="content-item">Aland Islands</div>
+            <div class="content-item">ALA</div>
+            <div class="content-item">+358-18</div>
+            <div class="content-item">EUR</div>
+            <div class="content-item">Mariehamn</div>
+          </div>
+          <div class="content-list list">
+            <i class="far fa-square"></i>
+            <div class="id-row">3</div>
+            <div class="content-item">Albania</div>
+            <div class="content-item">ALB</div>
+            <div class="content-item">355</div>
+            <div class="content-item">ALL</div>
+            <div class="content-item">Tirana</div>
+          </div>
+          <div class="content-list list">
+            <i class="far fa-square"></i>
+            <div class="id-row">4</div>
+            <div class="content-item">Algeria</div>
+            <div class="content-item">DZA</div>
+            <div class="content-item">213</div>
+            <div class="content-item">DZD</div>
+            <div class="content-item">Algiers</div>
+          </div>
+          <div class="content-list list">
+            <i class="far fa-square"></i>
+            <div class="id-row">5</div>
+            <div class="content-item">American Samoa</div>
+            <div class="content-item">ASM</div>
+            <div class="content-item">+1-684</div>
+            <div class="content-item">USD</div>
+            <div class="content-item">Pago Pago</div>
+          </div>
         </div>
       </div>
     </div>
-    </body>
+  </body>
 </html>
