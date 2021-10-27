@@ -11,92 +11,101 @@
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Table-task</title>
-    <script src="https://kit.fontawesome.com/aa6f3bfe37.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/aa6f3bfe37.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="wrapper">
-      <div class="table">
-        <div class="header-row">
-          <i class="far fa-square"></i>
-            <div class="id-column id">Id</div>
+      <div id="table">
+        <!-- <div class="header-row">
+          <input
+            type="checkbox"
+            class="checkbox"
+            onchange="checkedAll(this)"
+          />
+          <div class="header-column id-column-header id">Id</div>
           <div class="hidden">
             <i class="fas fa-arrow-up"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
-            <div class="header-item name">Name</div>
-            <div class="hidden">
+          <div class="header-column name">Name</div>
+          <div class="hidden">
             <i class="fas fa-arrow-up"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
-            <div class="header-item iso">Iso</div>
-            <div class="hidden">
+          <div class="header-column iso">Iso</div>
+          <div class="hidden">
             <i class="fas fa-arrow-up"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
-            <div class="header-item phone-code">Phone code</div>
-            <div class="hidden">
+          <div class="header-column phone-code">Phone code</div>
+          <div class="hidden">
             <i class="fas fa-arrow-up"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
-            <div class="header-item currency">Currency</div>
-            <div class="hidden">
+          <div class="header-column currency">Currency</div>
+          <div class="hidden">
             <i class="fas fa-arrow-up"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
-            <div class="header-item capital">Capital</div>
-            <div class="hidden">
+          <div class="header-column capital">Capital</div>
+          <div class="hidden">
             <i class="fas fa-arrow-up"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-        <div class="content-box">
-          <div class="content-list list">
-            <i class="far fa-square"></i>
-            <div class=" id-row">1</div>
-            <div class="content-item">Afghanistan</div>
-            <div class="content-item">AFG</div>
-            <div class="content-item">93</div>
-            <div class="content-item">AFN</div>
-            <div class="content-item">AFN</div>
+        <div class="tabel-body">
+          <div class="table-row list">
+            <input type="checkbox" class="checkbox" />
+            <div class="table-column id-column">1</div>
+            <div class="table-column">Afghanistan</div>
+            <div class="table-column">AFG</div>
+            <div class="table-column">93</div>
+            <div class="table-column">AFN</div>
+            <div class="table-column">AFN</div>
           </div>
-          <div class="content-list list">
-            <i class="far fa-square"></i>
-            <div class="id-row">2</div>
-            <div class="content-item">Aland Islands</div>
-            <div class="content-item">ALA</div>
-            <div class="content-item">+358-18</div>
-            <div class="content-item">EUR</div>
-            <div class="content-item">Mariehamn</div>
+          <div class="table-row list">
+            <input type="checkbox" class="checkbox" />
+            <div class="table-column id-column">2</div>
+            <div class="table-column">Aland Islands</div>
+            <div class="table-column">ALA</div>
+            <div class="table-column">+358-18</div>
+            <div class="table-column">EUR</div>
+            <div class="table-column">Mariehamn</div>
           </div>
-          <div class="content-list list">
-            <i class="far fa-square"></i>
-            <div class="id-row">3</div>
-            <div class="content-item">Albania</div>
-            <div class="content-item">ALB</div>
-            <div class="content-item">355</div>
-            <div class="content-item">ALL</div>
-            <div class="content-item">Tirana</div>
+          <div class="table-row list">
+            <input type="checkbox" class="checkbox" />
+            <div class="table-column id-column">3</div>
+            <div class="table-column">Albania</div>
+            <div class="table-column">ALB</div>
+            <div class="table-column">355</div>
+            <div class="table-column">ALL</div>
+            <div class="table-column">Tirana</div>
           </div>
-          <div class="content-list list">
-            <i class="far fa-square"></i>
-            <div class="id-row">4</div>
-            <div class="content-item">Algeria</div>
-            <div class="content-item">DZA</div>
-            <div class="content-item">213</div>
-            <div class="content-item">DZD</div>
-            <div class="content-item">Algiers</div>
+          <div class="table-row list">
+            <input type="checkbox" class="checkbox" />
+            <div class="table-column id-column">4</div>
+            <div class="table-column">Algeria</div>
+            <div class="table-column">DZA</div>
+            <div class="table-column">213</div>
+            <div class="table-column">DZD</div>
+            <div class="table-column">Algiers</div>
           </div>
-          <div class="content-list list">
-            <i class="far fa-square"></i>
-            <div class="id-row">5</div>
-            <div class="content-item">American Samoa</div>
-            <div class="content-item">ASM</div>
-            <div class="content-item">+1-684</div>
-            <div class="content-item">USD</div>
-            <div class="content-item">Pago Pago</div>
+          <div class="table-row list">
+            <input type="checkbox" class="checkbox" />
+            <div class="table-column id-column">5</div>
+            <div class="table-column">American Samoa</div>
+            <div class="table-column">ASM</div>
+            <div class="table-column">+1-684</div>
+            <div class="table-column">USD</div>
+            <div class="table-column">Pago Pago</div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
+    <script src="./checkbox.js"></script>
+    <script src="./table.js"></script>
   </body>
 </html>
