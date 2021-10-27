@@ -1,14 +1,8 @@
-const checkboxes = document.querySelectorAll("input[type = 'checkbox']");
-console.log(checkboxes);
-
 const checkedAll = (myCheckbox) => {
-    if(myCheckbox.checked === true){
-        checkboxes.forEach((checkbox) =>{
-            checkbox.checked = true;
-        })
-    } else {
-        checkboxes.forEach((checkbox) => {
-            checkbox.checked = false;
-        })
-    }
-}
+  const checkboxes = document.querySelectorAll("input[type = 'checkbox']");
+  const isChecked = myCheckbox.checked === true;
+  console.log(isChecked);
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = isChecked;
+  });
+};
