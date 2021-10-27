@@ -68,7 +68,9 @@ div.id-column-header {
 }
 
 .table-row {
+
   padding: 5px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,21 +210,3 @@ div.id-column-header {
 
 
 
-
-
-
- /* #table {
-   display: block;
-   margin-top: 20px;
-
- }
-
- th,td {
-   border:1px solid black;
-   padding: 5px;
- }
-
- button{
-   display: inline-block;
-   padding: 10px, 20px;
- } */
