@@ -161,26 +161,33 @@ const countries = [
   },
 ];
 
-let myTable = document.querySelector("#table");
-
-const headers = ["Id", "Name", "Iso", "Phone-code", "Capital", "Currency"];
+const headers = [
+  { label: "Id", value: "Id" },
+  { label: "Name", value: "Name" },
+  { label: "Iso", value: "Iso" },
+  { label: "Phone-code", value: "Phone-code" },
+  { label: "Capital", value: "Capital" },
+  { label: "Currency", value: "Currency" },
+];
 
 const createTable = () => {
+  let wrapper = document.querySelector("#wrapper");
   let table = document.createElement("table");
   let headerRow = document.createElement("tr");
   headerRow.classList.add("header-row");
 
-  headers.forEach((headerText) => {
+  headers.forEach((header) => {
     let headerColumn = document.createElement("th");
     headerColumn.classList.add("header-column");
-    // let buttonArrow = document.createElement("button")
-    // buttonArrow.type = ("button")
+    Object.values(header.value).forEach((headerText) => {
+      let textNode = document.createTextNode(headerText);
+      headerColumn.appendChild(textNode);
+      headerRow.appendChild(headerColumn);
 
-    let textNode = document.createTextNode(headerText);
-
-    headerColumn.appendChild(textNode);
-    headerRow.appendChild(headerColumn);
-    // buttonArrow.appendChild(headerColumn)
+      // let buttonArrow = document.createElement("button")
+      // buttonArrow.type = ("button")
+      // headerColumn.appendChild(buttonArrow)
+    });
   });
 
   table.appendChild(headerRow);
@@ -202,10 +209,10 @@ const createTable = () => {
     table.appendChild(tableRow);
   });
 
-  myTable.appendChild(table);
+  wrapper.appendChild(table);
 };
 createTable();
 
-    // let input = document.createElement('input');
-    // input.type= 'checkbox';
-    // tableRow.appendChild(input)
+// let input = document.createElement('input');
+// input.type= 'checkbox';
+// tableRow.appendChild(input)

@@ -32,7 +32,7 @@ img {
   height: auto;
 }
 
-#table {
+#wrapper {
   display: table;
   border: 1px solid #dddddd;
   border-radius: 5px;
@@ -48,7 +48,7 @@ img {
   justify-content: center;
   align-items: baseline;
   text-align: left;
-  padding:5px;
+  padding: 5px;
   border-bottom: 1px solid lightgrey;
   font-weight: 700;
   width: 1000px;
@@ -68,7 +68,6 @@ div.id-column-header {
 }
 
 .table-row {
-
   padding: 5px;
 
   display: flex;
@@ -207,6 +206,3 @@ div.id-column-header {
   color: #3a3838;
   cursor: pointer;
 }
-
-
-
