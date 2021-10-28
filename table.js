@@ -175,7 +175,7 @@ let table = document.createElement("table");
 let headerRow = document.createElement("tr");
 headerRow.classList.add("header-row");
 
-const createHeader = (headerRow, headers) => {
+const createHeaderTable = (headerRow, headers) => {
   headers.forEach((header) => {
     let headerColumn = document.createElement("th");
     headerColumn.classList.add("header-column");
@@ -190,15 +190,15 @@ const createBodyTable = (table, countries) => {
     let tableRow = document.createElement("tr");
     tableRow.classList.add("table-row");
 
-    Object.values(country).forEach((text) => {
+    for (let item in country) {
       let tableColumn = document.createElement("td");
       tableColumn.classList.add("table-column");
 
-      let textNode = document.createTextNode(text);
+      let textNode = document.createTextNode(country[item]);
 
       tableColumn.appendChild(textNode);
       tableRow.appendChild(tableColumn);
-    });
+    }
 
     table.appendChild(tableRow);
   });
@@ -214,6 +214,3 @@ const createTable = (wrapper, headerRow, headers, table, countries) => {
 
 createTable(wrapper, headerRow, headers, table, countries);
 
-// let input = document.createElement('input');
-// input.type= 'checkbox';
-// tableRow.appendChild(input)
