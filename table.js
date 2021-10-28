@@ -162,36 +162,30 @@ const countries = [
 ];
 
 const headers = [
-  { label: "Id", value: "Id" },
-  { label: "Name", value: "Name" },
-  { label: "Iso", value: "Iso" },
-  { label: "Phone-code", value: "Phone-code" },
-  { label: "Capital", value: "Capital" },
-  { label: "Currency", value: "Currency" },
+  { label: "Id", accessor: "id" },
+  { label: "Name", accessor: "name" },
+  { label: "Iso", accessor: "iso3" },
+  { label: "Phone-code", accessor: "phone_code" },
+  { label: "Capital", accessor: "capital" },
+  { label: "Currency", accessor: "currency" },
 ];
 
-const createTable = () => {
-  let wrapper = document.querySelector("#wrapper");
-  let table = document.createElement("table");
-  let headerRow = document.createElement("tr");
-  headerRow.classList.add("header-row");
+let wrapper = document.querySelector("#wrapper");
+let table = document.createElement("table");
+let headerRow = document.createElement("tr");
+headerRow.classList.add("header-row");
 
+const createHeader = (headerRow, headers) => {
   headers.forEach((header) => {
     let headerColumn = document.createElement("th");
     headerColumn.classList.add("header-column");
-    Object.values(header.value).forEach((headerText) => {
-      let textNode = document.createTextNode(headerText);
-      headerColumn.appendChild(textNode);
-      headerRow.appendChild(headerColumn);
-
-      // let buttonArrow = document.createElement("button")
-      // buttonArrow.type = ("button")
-      // headerColumn.appendChild(buttonArrow)
-    });
+    let textNode = document.createTextNode(header.label);
+    headerColumn.appendChild(textNode);
+    headerRow.appendChild(headerColumn);
   });
+};
 
-  table.appendChild(headerRow);
-
+const createBodyTable = (table, countries) => {
   countries.forEach((country) => {
     let tableRow = document.createElement("tr");
     tableRow.classList.add("table-row");
@@ -208,10 +202,17 @@ const createTable = () => {
 
     table.appendChild(tableRow);
   });
+};
+
+const createTable = (wrapper, headerRow, headers, table, countries) => {
+  createHeader(headerRow, headers);
+  table.appendChild(headerRow);
+  createBodyTable(table, countries);
 
   wrapper.appendChild(table);
 };
-createTable();
+
+createTable(wrapper, headerRow, headers, table, countries);
 
 // let input = document.createElement('input');
 // input.type= 'checkbox';
