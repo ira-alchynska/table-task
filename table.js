@@ -179,6 +179,7 @@ const createHeaderTable = (headerRow, headers) => {
   headers.forEach((header) => {
     let headerColumn = document.createElement("th");
     headerColumn.classList.add("header-column");
+    createCheckboxes(headerRow);
     let textNode = document.createTextNode(header.label);
     headerColumn.appendChild(textNode);
     headerRow.appendChild(headerColumn);
@@ -189,23 +190,33 @@ const createBodyTable = (table, countries) => {
   countries.forEach((country) => {
     let tableRow = document.createElement("tr");
     tableRow.classList.add("table-row");
-
+    createCheckboxes(tableRow);
     for (let item in country) {
       let tableColumn = document.createElement("td");
       tableColumn.classList.add("table-column");
-
+      
       let textNode = document.createTextNode(country[item]);
 
       tableColumn.appendChild(textNode);
       tableRow.appendChild(tableColumn);
+      
     }
 
     table.appendChild(tableRow);
   });
 };
 
+function createCheckboxes(tableRow){
+  let input = document.createElement('input');
+input.type= 'checkbox';
+console.log(input);
+tableRow.appendChild(input)
+
+}
+//createCheckboxes();
+
 const createTable = (wrapper, headerRow, headers, table, countries) => {
-  createHeader(headerRow, headers);
+  createHeaderTable(headerRow, headers);
   table.appendChild(headerRow);
   createBodyTable(table, countries);
 
