@@ -161,67 +161,111 @@ const countries = [
   },
 ];
 
-const headers = [
-  { label: "Id", accessor: "id" },
-  { label: "Name", accessor: "name" },
-  { label: "Iso", accessor: "iso3" },
-  { label: "Phone-code", accessor: "phone_code" },
-  { label: "Capital", accessor: "capital" },
-  { label: "Currency", accessor: "currency" },
+const columns = [
+  { label: "Id", accessor: "id", order: null, checked: false },
+  { label: "Name", accessor: "name", order: null, checked: false },
+  { label: "Iso", accessor: "iso3", order: null, checked: false },
+  { label: "Capital", accessor: "capital", order: null, checked: false },
+  { label: "Currency", accessor: "currency", order: null, checked: false },
+
+  { label: "Phone-code", accessor: "phone_code", order: null, checked: false },
 ];
 
-let wrapper = document.querySelector("#wrapper");
-let table = document.createElement("table");
-let headerRow = document.createElement("tr");
-headerRow.classList.add("header-row");
-
-const createHeaderTable = (headerRow, headers) => {
-  headers.forEach((header) => {
-    let headerColumn = document.createElement("th");
-    headerColumn.classList.add("header-column");
-    createCheckboxes(headerRow);
-    let textNode = document.createTextNode(header.label);
-    headerColumn.appendChild(textNode);
-    headerRow.appendChild(headerColumn);
-  });
+const refs = {
+  wrapper: document.querySelector("#wrapper"),
+  headerRow: document.querySelector("header-row"),
 };
+//function which is creating the header of table
+function createHeaders(columns) {
+  //row of headers
+  const headersRow = document.createElement("tr");
+  headersRow.classList.add("header-row");
 
-const createBodyTable = (table, countries) => {
-  countries.forEach((country) => {
-    let tableRow = document.createElement("tr");
-    tableRow.classList.add("table-row");
-    createCheckboxes(tableRow);
-    for (let item in country) {
-      let tableColumn = document.createElement("td");
-      tableColumn.classList.add("table-column");
-      
-      let textNode = document.createTextNode(country[item]);
+  const headerCells = columns.map((el) => {
+    const headerCell = document.createElement("th");
+    headerCell.classList.add("header-column");
+    // add content
 
-      tableColumn.appendChild(textNode);
-      tableRow.appendChild(tableColumn);
-      
-    }
+    headerCell.textContent = el.label;
+//button add
 
-    table.appendChild(tableRow);
+    const arrow = 'fas fa-arrow-up';
+    const more = 'fas fa-ellipsis-v';
+    const iconArrow = createButton(arrow);
+    const iconMore = createButton(more);
+    headerCell.append(iconArrow, iconMore);
+    return headerCell;
   });
-};
+  //add all cells to header
 
-function createCheckboxes(tableRow){
-  let input = document.createElement('input');
-input.type= 'checkbox';
-console.log(input);
-tableRow.appendChild(input)
+  headersRow.append(...headerCells);
 
+  return headersRow;
 }
-//createCheckboxes();
+//the function that creates body of table it takes array of columns and countries
+function createCells(columns, countries) {
+  // row in body table
+  const rows = countries.map((country) => {
+    const row = document.createElement("tr");
+    row.classList.add("table-row");
 
-const createTable = (wrapper, headerRow, headers, table, countries) => {
-  createHeaderTable(headerRow, headers);
-  table.appendChild(headerRow);
-  createBodyTable(table, countries);
+    //created cells in the body table
+    const cells = columns.map((column) => {
+      const cell = document.createElement("td");
+      cell.classList.add("table-column");
+      // content of table
+      //header accessor -the name of the key in the object
+      cell.textContent = country[column.accessor];
 
-  wrapper.appendChild(table);
-};
+      return cell;
+    });
 
-createTable(wrapper, headerRow, headers, table, countries);
+    row.append(...cells);
+    return row;
+  });
 
+  return rows;
+}
+// main function for the table
+function createTable(columns, countries) {
+  const table = document.createElement("table");
+  table.classList.add("table");
+  const thead = document.createElement("thead");
+
+  const tbody = document.createElement("tbody");
+
+  const tColumns = createHeaders(columns);
+  const rows = createCells(columns, countries);
+
+  refs.wrapper.append(table);
+  table.append(thead);
+  table.append(tbody);
+  thead.append(tColumns);
+  tbody.append(...rows);
+  console.log(refs.wrapper);
+}
+
+createTable(columns, countries);
+
+function createButton(fontAwesomeIcon) {
+  const buttonWrapper = document.createElement("div");
+  buttonWrapper.classList.add("button-wrapper");
+  const button = document.createElement("button");
+  button.classList.add("button");
+  const icon = document.createElement("i");
+  const iconarr = fontAwesomeIcon.split(" ");
+  iconarr.map((cl) => {
+    icon.classList.add(cl);
+  });
+  button.appendChild(icon);
+  buttonWrapper.appendChild(button);
+  return button;
+}
+
+// function createCheckboxes() {
+
+//   let input = document.createElement("input");
+//   input.classList.add("checkbox");
+//   input.type = "checkbox";
+//   refs.headerRow.append(input)
+// }

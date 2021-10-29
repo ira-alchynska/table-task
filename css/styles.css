@@ -179,7 +179,7 @@ div.id-column-header {
   font-size: 15px;
   width: 15px;
   height: 15px;
-  margin-right: 40px;
+  
 }
 
 .fa-ellipsis-v {
@@ -205,4 +205,15 @@ div.id-column-header {
   margin-right: 10px;
   color: #3a3838;
   cursor: pointer;
+}
+
+.button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: space-between;
 }
