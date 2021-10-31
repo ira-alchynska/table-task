@@ -162,38 +162,53 @@ const countries = [
 ];
 
 const columns = [
-  { label: "Id", accessor: "id", order: null, checked: false },
-  { label: "Name", accessor: "name", order: null, checked: false },
-  { label: "Iso", accessor: "iso3", order: null, checked: false },
-  { label: "Capital", accessor: "capital", order: null, checked: false },
-  { label: "Currency", accessor: "currency", order: null, checked: false },
+  { label: "Id", accessor: "id", order: null},
+  { label: "Name", accessor: "name", order: null},
+  { label: "Iso", accessor: "iso3", order: null},
+  { label: "Capital", accessor: "capital", order: null},
+  { label: "Currency", accessor: "currency", order: null},
 
-  { label: "Phone-code", accessor: "phone_code", order: null, checked: false },
+  { label: "Phone-code", accessor: "phone_code", order: null},
 ];
 
 const refs = {
   wrapper: document.querySelector("#wrapper"),
-  headerRow: document.querySelector("header-row"),
+  //headerCheckbox: document.querySelectorAll(".selectAll"),
+  
 };
+
 //function which is creating the header of table
 function createHeaders(columns) {
   //row of headers
-  const headersRow = document.createElement("tr");
+  const headersRow = document.createElement("div");
   headersRow.classList.add("header-row");
+  //checkbox for header
+  const headerCheckbox = createCheckbox();
+  headersRow.append(headerCheckbox);
+  headerCheckbox.classList.add('selectAll');
+  
 
-  const headerCells = columns.map((el) => {
-    const headerCell = document.createElement("th");
+  const headerCells = columns.map((column) => {
+    const headerCell = document.createElement("div");
     headerCell.classList.add("header-column");
+    const headerBorder = document.createElement('div');
+    
+    headerBorder.classList.add('headerBorder');
+    headerCell.appendChild(headerBorder);
+    console.log(headerBorder);
     // add content
 
-    headerCell.textContent = el.label;
-//button add
+    headerCell.textContent = column.label;
+    //button add
 
-    const arrow = 'fas fa-arrow-up';
-    const more = 'fas fa-ellipsis-v';
+    const arrow = "fas fa-arrow-up";
+    const more = "fas fa-ellipsis-v";
     const iconArrow = createButton(arrow);
     const iconMore = createButton(more);
-    headerCell.append(iconArrow, iconMore);
+    const buttonWrapper = document.createElement("div");
+    buttonWrapper.classList.add("button-wrapper");
+    buttonWrapper.append(iconArrow, iconMore);
+    headerCell.append(buttonWrapper);
     return headerCell;
   });
   //add all cells to header
@@ -206,12 +221,14 @@ function createHeaders(columns) {
 function createCells(columns, countries) {
   // row in body table
   const rows = countries.map((country) => {
-    const row = document.createElement("tr");
+    const row = document.createElement("div");
     row.classList.add("table-row");
-
+    // create checkboxes for the bodyRows
+    const bodyCheckbox = createCheckbox();
+    row.append(bodyCheckbox);
     //created cells in the body table
     const cells = columns.map((column) => {
-      const cell = document.createElement("td");
+      const cell = document.createElement("div");
       cell.classList.add("table-column");
       // content of table
       //header accessor -the name of the key in the object
@@ -230,9 +247,9 @@ function createCells(columns, countries) {
 function createTable(columns, countries) {
   const table = document.createElement("table");
   table.classList.add("table");
-  const thead = document.createElement("thead");
+  const thead = document.createElement("div");
 
-  const tbody = document.createElement("tbody");
+  const tbody = document.createElement("div");
 
   const tColumns = createHeaders(columns);
   const rows = createCells(columns, countries);
@@ -248,8 +265,6 @@ function createTable(columns, countries) {
 createTable(columns, countries);
 
 function createButton(fontAwesomeIcon) {
-  const buttonWrapper = document.createElement("div");
-  buttonWrapper.classList.add("button-wrapper");
   const button = document.createElement("button");
   button.classList.add("button");
   const icon = document.createElement("i");
@@ -258,14 +273,25 @@ function createButton(fontAwesomeIcon) {
     icon.classList.add(cl);
   });
   button.appendChild(icon);
-  buttonWrapper.appendChild(button);
+
   return button;
 }
 
-// function createCheckboxes() {
+function createCheckbox() {
+  const checkbox = document.createElement('input');
+  checkbox.type = "checkbox";
+  checkbox.classList.add("input");
+  return checkbox;
+}
 
-//   let input = document.createElement("input");
-//   input.classList.add("checkbox");
-//   input.type = "checkbox";
-//   refs.headerRow.append(input)
-// }
+const selectAllRef = document.querySelector('.selectAll');
+selectAllRef.addEventListener('click', event => {
+  const allCheckboxes = document.querySelectorAll('.input');
+  allCheckboxes.forEach(checkbox => {
+    checkbox.checked = event.target.checked;
+  });
+})
+
+
+
+

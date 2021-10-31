@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-img {
+img, svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -68,7 +68,7 @@ div.id-column-header {
 }
 
 .table-row {
-  padding: 5px;
+  /* padding: 5px; */
 
   display: flex;
   justify-content: center;
@@ -83,8 +83,15 @@ div.id-column-header {
   background-color: lightgray;
 }
 
+.header-column{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .table-column,
 .header-column {
+  
   padding: 20px 10px;
   text-align: left;
   width: 100%;
@@ -179,7 +186,7 @@ div.id-column-header {
   font-size: 15px;
   width: 15px;
   height: 15px;
-  
+  text-align: center;
 }
 
 .fa-ellipsis-v {
@@ -188,6 +195,7 @@ div.id-column-header {
   font-size: 15px;
   width: 15px;
   height: 15px;
+  text-align: center;
 }
 
 .hidden {
@@ -200,7 +208,7 @@ div.id-column-header {
   opacity: 1;
 }
 
-.checkbox {
+.input {
   margin-left: 10px;
   margin-right: 10px;
   color: #3a3838;
@@ -208,12 +216,21 @@ div.id-column-header {
 }
 
 .button {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
+  text-align: center;
+  border-color: transparent;
 }
 
 .button-wrapper{
+  width:60px;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  opacity: 0;
+}
+
+.button-wrapper:hover{
+  opacity: 1;
 }
