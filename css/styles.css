@@ -39,7 +39,7 @@ img, svg {
   margin: 15px 15px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  width: 1000px;
+  width: 1200px;
 }
 
 .header-row {
@@ -51,10 +51,11 @@ img, svg {
   padding: 5px;
   border-bottom: 1px solid lightgrey;
   font-weight: 700;
-  width: 1000px;
+  width: 1200px;
+
 }
 
-div.id-column {
+/* div.id-column {
   width: 60px;
   padding: 20px 10px;
   text-align: left;
@@ -65,7 +66,7 @@ div.id-column-header {
   width: 60px;
   padding: 20px 10px;
   text-align: left;
-}
+} */
 
 .table-row {
   /* padding: 5px; */
@@ -83,21 +84,31 @@ div.id-column-header {
   background-color: lightgray;
 }
 
-.header-column{
+.headerBorder{
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
 
 .table-column,
-.header-column {
+.headerBorder {
   
   padding: 20px 10px;
   text-align: left;
   width: 100%;
 }
 
-.id::before {
+.header-column {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+  border-left: 3px solid lightgray;
+  height: 20px;
+ 
+}
+
+/* .id::before {
   content: "";
   position: absolute;
   left: 30px;
@@ -179,7 +190,7 @@ div.id-column-header {
   background-color: lightgray;
   border-radius: 5px;
   transform: rotate(90deg);
-}
+} */
 
 .fa-arrow-up {
   color: lightgray;
@@ -216,6 +227,7 @@ div.id-column-header {
 }
 
 .button {
+  
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -224,6 +236,7 @@ div.id-column-header {
 }
 
 .button-wrapper{
+  margin-left: 15px;
   width:60px;
   display: flex;
   justify-content: space-between;

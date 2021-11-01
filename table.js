@@ -189,16 +189,18 @@ function createHeaders(columns) {
   
 
   const headerCells = columns.map((column) => {
+    const headerBorder = document.createElement('div');
+    headerBorder.classList.add('headerBorder');
     const headerCell = document.createElement("div");
     headerCell.classList.add("header-column");
-    const headerBorder = document.createElement('div');
-    
-    headerBorder.classList.add('headerBorder');
-    headerCell.appendChild(headerBorder);
-    console.log(headerBorder);
+    //const headerBorder = document.createElement('div');
+    // headerBorder.classList.add('headerBorder');
+    // headerCell.appendChild(headerBorder);
+    // console.log(headerBorder);
     // add content
 
     headerCell.textContent = column.label;
+    headerBorder.append(headerCell);
     //button add
 
     const arrow = "fas fa-arrow-up";
@@ -209,7 +211,8 @@ function createHeaders(columns) {
     buttonWrapper.classList.add("button-wrapper");
     buttonWrapper.append(iconArrow, iconMore);
     headerCell.append(buttonWrapper);
-    return headerCell;
+
+    return headerBorder;
   });
   //add all cells to header
 
