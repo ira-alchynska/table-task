@@ -1,19 +1,19 @@
 const countries = [
   {
-    id: 1,
-    name: "Afghanistan",
-    iso3: "AFG",
-    phone_code: "93",
-    capital: "Kabul",
-    currency: "AFN",
-  },
-  {
     id: 2,
     name: "Aland Islands",
     iso3: "ALA",
     phone_code: "+358-18",
     capital: "Mariehamn",
     currency: "EUR",
+  },
+  {
+    id: 1,
+    name: "Afghanistan",
+    iso3: "AFG",
+    phone_code: "93",
+    capital: "Kabul",
+    currency: "AFN",
   },
   {
     id: 3,
@@ -162,19 +162,18 @@ const countries = [
 ];
 
 const columns = [
-  { label: "Id", accessor: "id", order: null},
-  { label: "Name", accessor: "name", order: null},
-  { label: "Iso", accessor: "iso3", order: null},
-  { label: "Capital", accessor: "capital", order: null},
-  { label: "Currency", accessor: "currency", order: null},
+  { label: "Id", accessor: "id", order: null },
+  { label: "Name", accessor: "name", order: null },
+  { label: "Iso", accessor: "iso3", order: null },
+  { label: "Capital", accessor: "capital", order: null },
+  { label: "Currency", accessor: "currency", order: null },
 
-  { label: "Phone-code", accessor: "phone_code", order: null},
+  { label: "Phone-code", accessor: "phone_code", order: null },
 ];
 
 const refs = {
   wrapper: document.querySelector("#wrapper"),
   //headerCheckbox: document.querySelectorAll(".selectAll"),
-  
 };
 
 //function which is creating the header of table
@@ -185,12 +184,11 @@ function createHeaders(columns) {
   //checkbox for header
   const headerCheckbox = createCheckbox();
   headersRow.append(headerCheckbox);
-  headerCheckbox.classList.add('selectAll');
-  
+  headerCheckbox.classList.add("selectAll");
 
   const headerCells = columns.map((column) => {
-    const headerBorder = document.createElement('div');
-    headerBorder.classList.add('headerBorder');
+    const headerBorder = document.createElement("div");
+    headerBorder.classList.add("headerBorder");
     const headerCell = document.createElement("div");
     headerCell.classList.add("header-column");
     //const headerBorder = document.createElement('div');
@@ -262,7 +260,6 @@ function createTable(columns, countries) {
   table.append(tbody);
   thead.append(tColumns);
   tbody.append(...rows);
-  console.log(refs.wrapper);
 }
 
 createTable(columns, countries);
@@ -281,20 +278,88 @@ function createButton(fontAwesomeIcon) {
 }
 
 function createCheckbox() {
-  const checkbox = document.createElement('input');
+  const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.classList.add("input");
   return checkbox;
 }
 
-const selectAllRef = document.querySelector('.selectAll');
-selectAllRef.addEventListener('click', event => {
-  const allCheckboxes = document.querySelectorAll('.input');
-  allCheckboxes.forEach(checkbox => {
+const selectAllRef = document.querySelector(".selectAll");
+selectAllRef.addEventListener("click", (event) => {
+  const allCheckboxes = document.querySelectorAll(".input");
+  allCheckboxes.forEach((checkbox) => {
     checkbox.checked = event.target.checked;
   });
-})
+});
 
+// function bubbleSort(array, id){
+//   const arr = array.slice();
+// for (let i = 0; i < arr.length - 1; i++){
+//   for(let j = 0; j < arr.length - 1 - i; j++){
+//     if (arr[j] > arr[j+1]) {
+//       [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
 
+//     }
+//   }
+// }
+// return arr;
+// }
 
+// const arr = [1,6,7,3,9,55,28];
+// console.log(bubbleSort(arr));
+// console.log(arr);
+//--------------------------------------------------------------
+const idArr = countries.map(({id}) => id)
 
+function bubbleSortNumbers(idArr){
+    for (let i = 0; i < idArr.length - 1; i++){
+        for(let j = 0; j < idArr.length - 1 - i; j++){
+          if (idArr[j] > idArr[j+1]) {
+            [idArr[j], idArr[j+1]] = [idArr[j+1], idArr[j]]
+        }
+      }
+  }
+  return idArr;
+}
+
+console.log(bubbleSortNumbers(idArr));
+//---------------------------------------------------------------------
+// const array=['apple', 'linux', 'windows', 'python', 'javascript', 'c++', 'unix']
+
+// function bubbleSortStrings (words){
+//   const array = words.slice()
+//   for (let i = 1; i < array.length; i++)
+// {
+// for (let j = 0; j < array.length - 1; j++){
+//   if(array[j].localeCompare(array[j+1]) > 0){
+//     let temp = array[j];
+//     array[j] = array[j+1];
+//     array[j+1] =  temp;
+
+//   }
+// }
+// }
+//     array.length - 1 - array.length - 1 - 1;
+//     return array;
+// }
+// console.log(array);
+// console.log(bubbleSortStrings(array));
+
+const nameArr = countries.map(({ name }) => name);
+
+function bubbleSortStrings(nameArr) {
+  //const array = [...nameArr];
+  //console.log(array);
+
+  for (let i = 1; i < nameArr.length; i++) {
+    for (let j = 0; j < nameArr.length - 1; j++) {
+      if (nameArr[j].localeCompare(nameArr[j + 1]) > 0) {
+        [nameArr[j], nameArr[j + 1]] = [nameArr[j + 1], nameArr[j]];
+      }
+    }
+  }
+  nameArr.length - 1 - nameArr.length - 1 - 1;
+  return nameArr;
+}
+
+console.log(bubbleSortStrings(nameArr));
