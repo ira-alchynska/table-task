@@ -31,14 +31,7 @@ const countries = [
     capital: "Algiers",
     currency: "DZD",
   },
-  {
-    id: 5,
-    name: "American Samoa",
-    iso3: "ASM",
-    phone_code: "+1-684",
-    capital: "Pago Pago",
-    currency: "USD",
-  },
+
   {
     id: 6,
     name: "Andorra",
@@ -54,6 +47,14 @@ const countries = [
     phone_code: "244",
     capital: "Luanda",
     currency: "AOA",
+  },
+  {
+    id: 5,
+    name: "American Samoa",
+    iso3: "ASM",
+    phone_code: "+1-684",
+    capital: "Pago Pago",
+    currency: "USD",
   },
   {
     id: 8,
@@ -162,13 +163,23 @@ const countries = [
 ];
 
 const columns = [
-  { label: "Id", accessor: "id", order: null },
-  { label: "Name", accessor: "name", order: null },
-  { label: "Iso", accessor: "iso3", order: null },
-  { label: "Capital", accessor: "capital", order: null },
-  { label: "Currency", accessor: "currency", order: null },
+  { label: "Id", accessor: "id", order: null, sortingType: "number" },
+  { label: "Name", accessor: "name", order: null, sortingType: "string" },
+  { label: "Iso", accessor: "iso3", order: null, sortingType: "string" },
+  { label: "Capital", accessor: "capital", order: null, sortingType: "string" },
+  {
+    label: "Currency",
+    accessor: "currency",
+    order: null,
+    sortingType: "string",
+  },
 
-  { label: "Phone-code", accessor: "phone_code", order: null },
+  {
+    label: "Phone-code",
+    accessor: "phone_code",
+    order: null,
+    sortingType: "number",
+  },
 ];
 
 const refs = {
@@ -191,11 +202,9 @@ function createHeaders(columns) {
     headerBorder.classList.add("headerBorder");
     const headerCell = document.createElement("div");
     headerCell.classList.add("header-column");
-    //const headerBorder = document.createElement('div');
-    // headerBorder.classList.add('headerBorder');
-    // headerCell.appendChild(headerBorder);
-    // console.log(headerBorder);
-    // add content
+    headerCell.setAttribute('data-accessor', column.accessor);
+    headerCell.setAttribute('data-sortingtype', column.sortingType);
+    
 
     headerCell.textContent = column.label;
     headerBorder.append(headerCell);
@@ -204,6 +213,7 @@ function createHeaders(columns) {
     const arrow = "fas fa-arrow-up";
     const more = "fas fa-ellipsis-v";
     const iconArrow = createButton(arrow);
+
     const iconMore = createButton(more);
     const buttonWrapper = document.createElement("div");
     buttonWrapper.classList.add("button-wrapper");
@@ -246,6 +256,7 @@ function createCells(columns, countries) {
 }
 // main function for the table
 function createTable(columns, countries) {
+  
   const table = document.createElement("table");
   table.classList.add("table");
   const thead = document.createElement("div");
@@ -260,6 +271,7 @@ function createTable(columns, countries) {
   table.append(tbody);
   thead.append(tColumns);
   tbody.append(...rows);
+  // buttons
 }
 
 createTable(columns, countries);
@@ -292,74 +304,39 @@ selectAllRef.addEventListener("click", (event) => {
   });
 });
 
-// function bubbleSort(array, id){
-//   const arr = array.slice();
-// for (let i = 0; i < arr.length - 1; i++){
-//   for(let j = 0; j < arr.length - 1 - i; j++){
-//     if (arr[j] > arr[j+1]) {
-//       [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
+function bubbleSort(countries, accessor, sortingType) {
+  const newArr = [...countries];
 
-//     }
-//   }
-// }
-// return arr;
-// }
-
-// const arr = [1,6,7,3,9,55,28];
-// console.log(bubbleSort(arr));
-// console.log(arr);
-//--------------------------------------------------------------
-const idArr = countries.map(({id}) => id)
-
-function bubbleSortNumbers(idArr){
-    for (let i = 0; i < idArr.length - 1; i++){
-        for(let j = 0; j < idArr.length - 1 - i; j++){
-          if (idArr[j] > idArr[j+1]) {
-            [idArr[j], idArr[j+1]] = [idArr[j+1], idArr[j]]
+  for (let i = 0; i < newArr.length - 1; i++) {
+    for (let j = 0; j < newArr.length - 1 - i; j++) {
+      if (sortingType === "number") {
+        if (newArr[j][accessor] > newArr[j + 1][accessor]) {
+          [newArr[j], newArr[j + 1]] = [newArr[j + 1], newArr[j]];
         }
-      }
-  }
-  return idArr;
-}
-
-console.log(bubbleSortNumbers(idArr));
-//---------------------------------------------------------------------
-// const array=['apple', 'linux', 'windows', 'python', 'javascript', 'c++', 'unix']
-
-// function bubbleSortStrings (words){
-//   const array = words.slice()
-//   for (let i = 1; i < array.length; i++)
-// {
-// for (let j = 0; j < array.length - 1; j++){
-//   if(array[j].localeCompare(array[j+1]) > 0){
-//     let temp = array[j];
-//     array[j] = array[j+1];
-//     array[j+1] =  temp;
-
-//   }
-// }
-// }
-//     array.length - 1 - array.length - 1 - 1;
-//     return array;
-// }
-// console.log(array);
-// console.log(bubbleSortStrings(array));
-
-const nameArr = countries.map(({ name }) => name);
-
-function bubbleSortStrings(nameArr) {
-  //const array = [...nameArr];
-  //console.log(array);
-
-  for (let i = 1; i < nameArr.length; i++) {
-    for (let j = 0; j < nameArr.length - 1; j++) {
-      if (nameArr[j].localeCompare(nameArr[j + 1]) > 0) {
-        [nameArr[j], nameArr[j + 1]] = [nameArr[j + 1], nameArr[j]];
+      } else if (sortingType === "string") {
+        if (newArr[j][accessor].localeCompare(newArr[j + 1][accessor] ) > 0) {
+          [newArr[j], newArr[j + 1]] = [newArr[j + 1], newArr[j]];
+        }
       }
     }
   }
-  nameArr.length - 1 - nameArr.length - 1 - 1;
-  return nameArr;
+  return newArr;
 }
 
-console.log(bubbleSortStrings(nameArr));
+//const result = bubbleSort(countries, "id", "number");
+
+//const arrowButton = document.querySelectorAll(".fa-arrow-up");
+const headerColumn = document.querySelectorAll(".header-column");
+headerColumn.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    
+    const accessor = event.currentTarget.dataset.accessor;
+    
+    const sortingType = event.currentTarget.dataset.sortingtype;
+    console.log(accessor, sortingType)
+    let sortage = bubbleSort(countries, accessor, sortingType);
+    
+    refs.wrapper.innerHTML = "";
+    createTable(columns, sortage);
+  });
+});
