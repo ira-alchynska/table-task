@@ -17,94 +17,10 @@
     ></script>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="table">
-        <div class="header-row">
-          <input
-            type="checkbox"
-            class="checkbox"
-            onchange="checkedAll(this)"
-          />
-          <div class="header-column id-column-header id">Id</div>
-          <div class="hidden">
-            <i class="fas fa-arrow-up"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-          <div class="header-column name">Name</div>
-          <div class="hidden">
-            <i class="fas fa-arrow-up"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-          <div class="header-column iso">Iso</div>
-          <div class="hidden">
-            <i class="fas fa-arrow-up"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-          <div class="header-column phone-code">Phone code</div>
-          <div class="hidden">
-            <i class="fas fa-arrow-up"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-          <div class="header-column currency">Currency</div>
-          <div class="hidden">
-            <i class="fas fa-arrow-up"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-          <div class="header-column capital">Capital</div>
-          <div class="hidden">
-            <i class="fas fa-arrow-up"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </div>
-        <div class="tabel-body">
-          <div class="table-row list">
-            <input type="checkbox" class="checkbox" />
-            <div class="table-column id-column">1</div>
-            <div class="table-column">Afghanistan</div>
-            <div class="table-column">AFG</div>
-            <div class="table-column">93</div>
-            <div class="table-column">AFN</div>
-            <div class="table-column">AFN</div>
-          </div>
-          <div class="table-row list">
-            <input type="checkbox" class="checkbox" />
-            <div class="table-column id-column">2</div>
-            <div class="table-column">Aland Islands</div>
-            <div class="table-column">ALA</div>
-            <div class="table-column">+358-18</div>
-            <div class="table-column">EUR</div>
-            <div class="table-column">Mariehamn</div>
-          </div>
-          <div class="table-row list">
-            <input type="checkbox" class="checkbox" />
-            <div class="table-column id-column">3</div>
-            <div class="table-column">Albania</div>
-            <div class="table-column">ALB</div>
-            <div class="table-column">355</div>
-            <div class="table-column">ALL</div>
-            <div class="table-column">Tirana</div>
-          </div>
-          <div class="table-row list">
-            <input type="checkbox" class="checkbox" />
-            <div class="table-column id-column">4</div>
-            <div class="table-column">Algeria</div>
-            <div class="table-column">DZA</div>
-            <div class="table-column">213</div>
-            <div class="table-column">DZD</div>
-            <div class="table-column">Algiers</div>
-          </div>
-          <div class="table-row list">
-            <input type="checkbox" class="checkbox" />
-            <div class="table-column id-column">5</div>
-            <div class="table-column">American Samoa</div>
-            <div class="table-column">ASM</div>
-            <div class="table-column">+1-684</div>
-            <div class="table-column">USD</div>
-            <div class="table-column">Pago Pago</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="wrapper"></div>
     <script src="./checkbox.js"></script>
+    <script type="module" src="./data.js"  ></script>
+    <script src="./table.js"></script>
+
   </body>
 </html>

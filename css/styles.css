@@ -26,20 +26,20 @@ a {
   text-decoration: none;
 }
 
-img {
+img, svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.table {
+#wrapper {
   display: table;
   border: 1px solid #dddddd;
   border-radius: 5px;
   margin: 15px 15px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  width: 1000px;
+  width: 1200px;
 }
 
 .header-row {
@@ -48,11 +48,14 @@ img {
   justify-content: center;
   align-items: baseline;
   text-align: left;
+  padding: 5px;
   border-bottom: 1px solid lightgrey;
   font-weight: 700;
+  width: 1200px;
+
 }
 
-div.id-column {
+/* div.id-column {
   width: 60px;
   padding: 20px 10px;
   text-align: left;
@@ -63,9 +66,11 @@ div.id-column-header {
   width: 60px;
   padding: 20px 10px;
   text-align: left;
-}
+} */
 
 .table-row {
+  /* padding: 5px; */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,14 +84,31 @@ div.id-column-header {
   background-color: lightgray;
 }
 
+.headerBorder{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .table-column,
-.header-column {
+.headerBorder {
+  
   padding: 20px 10px;
   text-align: left;
   width: 100%;
 }
 
-.id::before {
+.header-column {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+  border-left: 3px solid lightgray;
+  height: 20px;
+ 
+}
+
+/* .id::before {
   content: "";
   position: absolute;
   left: 30px;
@@ -168,14 +190,14 @@ div.id-column-header {
   background-color: lightgray;
   border-radius: 5px;
   transform: rotate(90deg);
-}
+} */
 
 .fa-arrow-up {
   color: lightgray;
   font-size: 15px;
   width: 15px;
   height: 15px;
-  margin-right: 40px;
+  text-align: center;
 }
 
 .fa-ellipsis-v {
@@ -184,6 +206,7 @@ div.id-column-header {
   font-size: 15px;
   width: 15px;
   height: 15px;
+  text-align: center;
 }
 
 .hidden {
@@ -196,11 +219,31 @@ div.id-column-header {
   opacity: 1;
 }
 
-.checkbox {
+.input {
   margin-left: 10px;
   margin-right: 10px;
   color: #3a3838;
   cursor: pointer;
 }
 
+.button {
+  
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  border-color: transparent;
+}
 
+.button-wrapper{
+  margin-left: 15px;
+  width:60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  opacity: 0;
+}
+
+.button-wrapper:hover{
+  opacity: 1;
+}
