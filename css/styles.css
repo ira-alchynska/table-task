@@ -55,6 +55,20 @@ img, svg {
 
 }
 
+.filter-row{
+  text-align: left;
+  padding: 15px 10px;
+  border-bottom: 1px solid lightgrey;
+  font-weight: 700;
+  width: 1200px;
+}
+
+.filter-input {
+  margin-left: 10px;
+  width: 200px;
+  height: 25px;
+}
+
 /* div.id-column {
   width: 60px;
   padding: 20px 10px;
@@ -226,8 +240,7 @@ div.id-column-header {
   cursor: pointer;
 }
 
-.button {
-  
+.btn-arrow, .btn-more {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -239,6 +252,7 @@ div.id-column-header {
   margin-left: 15px;
   width:60px;
   display: flex;
+  flex-grow: 10;
   justify-content: space-between;
   align-items: baseline;
   opacity: 0;
@@ -246,4 +260,11 @@ div.id-column-header {
 
 .button-wrapper:hover{
   opacity: 1;
+}
+
+.button-wrapper:hover{
+  opacity: 1;
+}
+.table-column-hidden{
+  display: none;
 }
