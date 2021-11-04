@@ -1,19 +1,19 @@
 const countries = [
   {
-    id: 1,
-    name: "Afghanistan",
-    iso3: "AFG",
-    phone_code: "93",
-    capital: "Kabul",
-    currency: "AFN",
-  },
-  {
     id: 2,
     name: "Aland Islands",
     iso3: "ALA",
     phone_code: "+358-18",
     capital: "Mariehamn",
     currency: "EUR",
+  },
+  {
+    id: 1,
+    name: "Afghanistan",
+    iso3: "AFG",
+    phone_code: "93",
+    capital: "Kabul",
+    currency: "AFN",
   },
   {
     id: 3,
@@ -31,14 +31,7 @@ const countries = [
     capital: "Algiers",
     currency: "DZD",
   },
-  {
-    id: 5,
-    name: "American Samoa",
-    iso3: "ASM",
-    phone_code: "+1-684",
-    capital: "Pago Pago",
-    currency: "USD",
-  },
+
   {
     id: 6,
     name: "Andorra",
@@ -54,6 +47,14 @@ const countries = [
     phone_code: "244",
     capital: "Luanda",
     currency: "AOA",
+  },
+  {
+    id: 5,
+    name: "American Samoa",
+    iso3: "ASM",
+    phone_code: "+1-684",
+    capital: "Pago Pago",
+    currency: "USD",
   },
   {
     id: 8,
@@ -162,19 +163,28 @@ const countries = [
 ];
 
 const columns = [
-  { label: "Id", accessor: "id", order: null},
-  { label: "Name", accessor: "name", order: null},
-  { label: "Iso", accessor: "iso3", order: null},
-  { label: "Capital", accessor: "capital", order: null},
-  { label: "Currency", accessor: "currency", order: null},
+  { label: "Id", accessor: "id", order: null, sortingType: "number" },
+  { label: "Name", accessor: "name", order: null, sortingType: "string" },
+  { label: "Iso", accessor: "iso3", order: null, sortingType: "string" },
+  { label: "Capital", accessor: "capital", order: null, sortingType: "string" },
+  {
+    label: "Currency",
+    accessor: "currency",
+    order: null,
+    sortingType: "string",
+  },
 
-  { label: "Phone-code", accessor: "phone_code", order: null},
+  {
+    label: "Phone-code",
+    accessor: "phone_code",
+    order: null,
+    sortingType: "number",
+  },
 ];
 
 const refs = {
   wrapper: document.querySelector("#wrapper"),
   //headerCheckbox: document.querySelectorAll(".selectAll"),
-  
 };
 
 //function which is creating the header of table
@@ -185,19 +195,16 @@ function createHeaders(columns) {
   //checkbox for header
   const headerCheckbox = createCheckbox();
   headersRow.append(headerCheckbox);
-  headerCheckbox.classList.add('selectAll');
-  
+  headerCheckbox.classList.add("selectAll");
 
   const headerCells = columns.map((column) => {
-    const headerBorder = document.createElement('div');
-    headerBorder.classList.add('headerBorder');
+    const headerBorder = document.createElement("div");
+    headerBorder.classList.add("headerBorder");
     const headerCell = document.createElement("div");
     headerCell.classList.add("header-column");
-    //const headerBorder = document.createElement('div');
-    // headerBorder.classList.add('headerBorder');
-    // headerCell.appendChild(headerBorder);
-    // console.log(headerBorder);
-    // add content
+    headerCell.setAttribute('data-accessor', column.accessor);
+    headerCell.setAttribute('data-sortingtype', column.sortingType);
+    
 
     headerCell.textContent = column.label;
     headerBorder.append(headerCell);
@@ -206,6 +213,7 @@ function createHeaders(columns) {
     const arrow = "fas fa-arrow-up";
     const more = "fas fa-ellipsis-v";
     const iconArrow = createButton(arrow);
+
     const iconMore = createButton(more);
     const buttonWrapper = document.createElement("div");
     buttonWrapper.classList.add("button-wrapper");
@@ -248,6 +256,7 @@ function createCells(columns, countries) {
 }
 // main function for the table
 function createTable(columns, countries) {
+  
   const table = document.createElement("table");
   table.classList.add("table");
   const thead = document.createElement("div");
@@ -262,7 +271,7 @@ function createTable(columns, countries) {
   table.append(tbody);
   thead.append(tColumns);
   tbody.append(...rows);
-  console.log(refs.wrapper);
+  // buttons
 }
 
 createTable(columns, countries);
@@ -281,20 +290,53 @@ function createButton(fontAwesomeIcon) {
 }
 
 function createCheckbox() {
-  const checkbox = document.createElement('input');
+  const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.classList.add("input");
   return checkbox;
 }
 
-const selectAllRef = document.querySelector('.selectAll');
-selectAllRef.addEventListener('click', event => {
-  const allCheckboxes = document.querySelectorAll('.input');
-  allCheckboxes.forEach(checkbox => {
+const selectAllRef = document.querySelector(".selectAll");
+selectAllRef.addEventListener("click", (event) => {
+  const allCheckboxes = document.querySelectorAll(".input");
+  allCheckboxes.forEach((checkbox) => {
     checkbox.checked = event.target.checked;
   });
-})
+});
 
+function bubbleSort(countries, accessor, sortingType) {
+  const newArr = [...countries];
 
+  for (let i = 0; i < newArr.length - 1; i++) {
+    for (let j = 0; j < newArr.length - 1 - i; j++) {
+      if (sortingType === "number") {
+        if (newArr[j][accessor] > newArr[j + 1][accessor]) {
+          [newArr[j], newArr[j + 1]] = [newArr[j + 1], newArr[j]];
+        }
+      } else if (sortingType === "string") {
+        if (newArr[j][accessor].localeCompare(newArr[j + 1][accessor] ) > 0) {
+          [newArr[j], newArr[j + 1]] = [newArr[j + 1], newArr[j]];
+        }
+      }
+    }
+  }
+  return newArr;
+}
 
+//const result = bubbleSort(countries, "id", "number");
 
+//const arrowButton = document.querySelectorAll(".fa-arrow-up");
+const headerColumn = document.querySelectorAll(".header-column");
+headerColumn.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    
+    const accessor = event.currentTarget.dataset.accessor;
+    
+    const sortingType = event.currentTarget.dataset.sortingtype;
+    console.log(accessor, sortingType)
+    let sortage = bubbleSort(countries, accessor, sortingType);
+    
+    refs.wrapper.innerHTML = "";
+    createTable(columns, sortage);
+  });
+});
