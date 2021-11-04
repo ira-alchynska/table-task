@@ -169,42 +169,48 @@ const columns = [
     accessor: "id",
     order: "asc",
     sortingType: "number",
-    hidden: false
+    hidden: false,
+    toggle: true
   },
   {
     label: "Name",
     accessor: "name",
     order: "asc",
     sortingType: "string",
-    hidden: false
+    hidden: false,
+    toggle: true
   },
   {
     label: "Iso",
     accessor: "iso3",
     order: "asc",
     sortingType: "string",
-    hidden: false
+    hidden: false,
+    toggle: true
   },
   {
     label: "Capital",
     accessor: "capital",
     order: "asc",
     sortingType: "string",
-    hidden: false
+    hidden: false,
+    toggle: true
   },
   {
     label: "Currency",
     accessor: "currency",
     order: "asc",
     sortingType: "string",
-    hidden: false
+    hidden: false,
+    toggle: true
   },
   {
     label: "Phone-code",
     accessor: "phone_code",
     order: "asc",
     sortingType: "number",
-    hidden: false
+    hidden: false,
+    toggle: true
   }
 ];
 
@@ -243,6 +249,7 @@ function createHeaderCell(column) {
   headerCell.setAttribute("data-accessor", column.accessor);
   headerCell.setAttribute("data-sorting", column.sortingType);
   headerCell.setAttribute("data-hidden", column.hidden);
+  headerCell.setAttribute('data-toggle', column.toggle);
   headerCell.textContent = column.label;
   headerBorder.append(headerCell);
   //button add
@@ -254,6 +261,7 @@ function createHeaderCell(column) {
   const iconArrow = createButton(arrow, btnArrow);
 
   const iconMore = createButton(more, btnMore);
+  ;
   const buttonWrapper = document.createElement("div");
   buttonWrapper.classList.add("button-wrapper");
   buttonWrapper.append(iconArrow, iconMore);
@@ -317,9 +325,9 @@ function createTable(columns, countries) {
 
   tbody.append(...rows);
   // buttons
-
+  
   //listeners
-  addListenersHideColumns();
+ // addListenersHideColumns();
 }
 
 createTable(columns, countries);
@@ -446,35 +454,107 @@ function filterTableByName(event, columns) {
   tableRow.append(...filter);
 }
 
-// function CreateDropDownList() {
-//   const buttonMore = document.querySelector(".btn-more");
-//   const select = `<ul class='select'>
-//       <li class="hide-column">Hide</li>
-//       <li class="asc">ASC</li>
-//       <li class="desc">DESC</li>
-//     </ul>`;
 
-//   buttonMore.insertAdjacentHTML("beforeend", select);
-// }
 
 function addListenersHideColumns() {
   const headerColumnsToHide = document.querySelectorAll(".header-column");
   headerColumnsToHide.forEach((th) => {
     th.addEventListener("click", (event) => {
+      if (event.target.closest("button.btn-more")) {
       const accessor = event.currentTarget.dataset.accessor;
       hideColumns(accessor)
+      }
     });
   });
 }
 
-function hideColumns (accessor){
-  const index = columns.findIndex((col) => col.accessor === accessor);
-  const column = columns.find((col) => col.accessor === accessor);
-  column.hidden = true;
+// function hideColumns (accessor){
+//   const index = columns.findIndex((col) => col.accessor === accessor);
+//   const column = columns.find((col) => col.accessor === accessor);
+//   column.hidden = true;
   
-  columns.splice(index, 1, column);
+//   columns.splice(index, 1, column);
   
-  refs.wrapper.innerHTML = "";
-  createTable(columns, countries);
+//   refs.wrapper.innerHTML = "";
+//   createTable(columns, countries);
+// }
+
+
+function CreateDropDownList() {
+  const buttonsMore = document.querySelectorAll(".btn-more");
+  buttonsMore.forEach(button => {
+    
+    
+      const select = `<ul class='select active'>
+      <li class="list asc"><button class= "button-list btn-asc">Sort by ASC</button></li>
+       <li class="list desc"><button class="button-list btn-desc">Sort by DESC</button></li>
+       <li class="list hide-column"><button class="button-list btn-hide">HIDE</button></li>
+       <li class="list desc"><button class="button-list btn-show">SHOW ALL</button></li>
+       
+     </ul>`;
+   
+     return button.innerHTML += select;
+
+  })
+  
 }
 
+CreateDropDownList()
+
+
+
+function toggleMenu(){
+  const headerColumn = document.querySelectorAll(".header-column");
+  
+  headerColumn.forEach((th) => {
+    th.addEventListener("click", (event) => {
+      if (event.target.closest("button.btn-more")) {
+        showDropDown(event, columns)
+}
+    })
+  })
+}
+toggleMenu()
+    
+
+
+
+function showDropDown(event, columns){
+  const toggleList = document.querySelector('ul .select');
+ if(event.target.closest(toggleList)){
+  const accessor = event.currentTarget.dataset.accessor;
+  let toggle = event.currentTarget.dataset.toggle;
+  const column = columns.find((col) => col.accessor === accessor);
+  console.log(accessor,toggle,column)
+  
+  if(column.toggle === true){
+   column.toggle = false;
+   toggleList.classList.remove('active')
+    
+      } else {
+        
+        column.toggle = true;
+        toggleList.classList.add('active')
+      }
+ }
+    
+ 
+  
+  
+}
+
+
+//columns.forEach((column) => {
+  //   const accessor = event.currentTarget.dataset.accessor;
+  //   let toggle = event.currentTarget.dataset.toggle;
+  //   //const col = columns.find((col) => col.accessor === accessor);
+   
+  //   if(column.accessor === accessor){
+  //     toggle = true;
+  //   }
+  //   })
+  // if(toggle === toggleClass){
+  //   toggleMenu.classList.remove('active');
+  // }  else{
+  //   toggleMenu.classList.add('active')
+  // } 

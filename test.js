@@ -1,16 +1,11 @@
-// function dropDownList(){
-//   const select = document.createElement('select')
 
-// }
+const headerColumn = document.querySelectorAll(".header-column");
 
-// function show_hide_column(col_no, do_show) {
-//   var rows = document.getElementById('id_of_table').rows;
+headerColumn.forEach((th) => {
+  th.addEventListener("click", (event) => {
+    const accessor = event.currentTarget.dataset.accessor;
+    const toggle = event.currentTarget.dataset.toggle;
 
-//   for (let row = 0; row < rows.length; row++) {
-//       var cols = rows[row].cells;
-//       if (col_no >= 0 && col_no < cols.length) {
-//           cols[col_no].style.display = do_show ? '' : 'none';
-//       }
-//   }
-// }
-// show_hide_column()
+    if (event.target) {
+      let toggle = columns.find((c) => c.accessor === accessor).toggle;
+      console.log(order);
