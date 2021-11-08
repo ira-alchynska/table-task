@@ -34,8 +34,6 @@ function hideColumns(accessor) {
   });
 }
 
-export default hideColumns;
-
 // function addListenersHideColumns() {
 //   const headerColumnsToHide = document.querySelectorAll(".header-column");
 //   headerColumnsToHide.forEach((th) => {
@@ -48,13 +46,18 @@ export default hideColumns;
 //   });
 // }
 
-// function hideColumns (accessor){
+// function hideColumns(accessor) {
 //   const index = columns.findIndex((col) => col.accessor === accessor);
 //   const column = columns.find((col) => col.accessor === accessor);
-//   column.hidden = true;
+//   columns[index].hidden = true;
 
-//   columns.splice(index, 1, column);
+//   columns.forEach((column) => {
+//     if (column.accessor === accessor) {
+//       column.hidden = true;
+//     }
+//   });
 
 //   refs.wrapper.innerHTML = "";
 //   createTable(columns, countries);
 // }
+export default hideColumns;

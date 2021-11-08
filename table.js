@@ -4,6 +4,11 @@ import { makeSort } from "./sort.js";
 import { createFilterRow, addListenersFilter } from "./filter.js";
 //import addListenersHideColumns from "./hide-columns.js";
 import { createButton } from "./button.js";
+import {
+  createDropDownList,
+  openDropDown,
+  closeDropDown,
+} from "./create-dropdown.js";
 import hideColumns from "./hide-columns.js";
 import { showColumns } from "./show-columns.js";
 
@@ -14,17 +19,15 @@ export const refs = {
 
 //function which is creating the header of table
 function createHeaders(columns) {
-  //row of headers
+  //row of header
   const headersRow = document.createElement("div");
   headersRow.classList.add("header-row");
-
   //checkbox for header
   const headerCheckbox = createCheckbox();
   headersRow.append(headerCheckbox);
   headerCheckbox.classList.add("selectAll");
   const headerCells = columns.map((column) => createHeaderCell(column));
   //add all cells to header
-
   headersRow.append(...headerCells);
 
   return headersRow;
@@ -120,50 +123,17 @@ export function createTable(columns, countries) {
   addListenersFilter();
   //addListenersHideColumns();
   //addEventListenerShowDropDown();
-}
-//createTable(columns, countries);
-
-function createDropDownList() {
-  const buttonsMore = document.querySelectorAll(".btn-more");
-  buttonsMore.forEach((button) => {
-    const select = `
-   <ul class='select active'>
-         <li class="list asc"><button class= "button-list btn-asc">Sort by ASC</button></li>
-         <li class="list desc"><button class="button-list btn-desc">Sort by DESC</button></li>
-         <li class="list hide-column"><button class="button-list btn-hide">HIDE</button></li>
-         <li class="list desc"><button class="button-list btn-show">SHOW ALL</button></li>
-   </ul>`;
-
-    return (button.innerHTML += select);
-  });
-}
-
-createDropDownList();
-
-function openDropDown(target, accessor) {
-  const ul = target.querySelector(".select");
-  if (ul) {
-    const column = columns.find((col) => col.accessor === accessor);
-    column.toggle = false;
-    ul.classList.remove("hidden");
-  }
-}
-
-function closeDropDown() {
-  const toggleMenu = document.querySelectorAll(".select");
-  columns.forEach((col) => (col.toggle = true));
-  toggleMenu.forEach((ul) => ul.classList.add("hidden"));
+  createDropDownList();
 }
 
 createTable(columns, countries);
-createDropDownList();
 
 // add event listeners
 
 document.body.addEventListener("click", (e) => {
   if (!e.target.matches(".btn-more")) closeDropDown();
 });
-
+// arrow sort
 function addListenersSort(order) {
   const headerColumn = document.querySelectorAll(".header-column");
   headerColumn.forEach((th) => {
