@@ -1,4 +1,4 @@
-export const countries = [
+ const countries = [
     {
       id: 2,
       name: "Aland Islands",
@@ -162,7 +162,7 @@ export const countries = [
     }
   ];
   
-  export const columns = [
+   const columns = [
     {
       label: "Id",
       accessor: "id",
@@ -206,3 +206,5 @@ export const countries = [
       hidden: false
     }
   ];
+
+  export{countries, columns}

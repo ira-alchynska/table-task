@@ -26,7 +26,8 @@ a {
   text-decoration: none;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -52,10 +53,9 @@ img, svg {
   border-bottom: 1px solid lightgrey;
   font-weight: 700;
   width: 1200px;
-
 }
 
-.filter-row{
+.filter-row {
   text-align: left;
   padding: 15px 10px;
   border-bottom: 1px solid lightgrey;
@@ -98,7 +98,7 @@ div.id-column-header {
   background-color: lightgray;
 }
 
-.headerBorder{
+.headerBorder {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -106,7 +106,6 @@ div.id-column-header {
 
 .table-column,
 .headerBorder {
-  
   padding: 20px 10px;
   text-align: left;
   width: 100%;
@@ -119,7 +118,6 @@ div.id-column-header {
   text-align: center;
   border-left: 3px solid lightgray;
   height: 20px;
- 
 }
 
 /* .id::before {
@@ -240,7 +238,8 @@ div.id-column-header {
   cursor: pointer;
 }
 
-.btn-arrow, .btn-more {
+.btn-arrow,
+.btn-more {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -251,9 +250,9 @@ div.id-column-header {
   position: relative;
 }
 
-.button-wrapper{
+.button-wrapper {
   margin-left: 15px;
-  width:60px;
+  width: 60px;
   display: flex;
   flex-grow: 10;
   justify-content: space-between;
@@ -268,15 +267,18 @@ div.id-column-header {
 .button-wrapper:hover{
   opacity: 1;
 } */
-.table-column-hidden{
+.table-column-hidden {
   display: none;
 }
 
-.select{
+.select {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   position: absolute;
   padding: 0;
   margin: 0;
+
   background-color: white;
   border: 2px solid gray;
   border-radius: 5px;
@@ -285,7 +287,7 @@ div.id-column-header {
   transition: 0.5s;
 }
 
-.button-list{
+.button-list {
   margin: 0;
   padding: 5px 5px;
   display: flex;
@@ -294,12 +296,11 @@ div.id-column-header {
   width: 100%;
   height: 40px;
   border-color: transparent;
-
 }
 
-.list{
+.list {
   width: 100%;
 }
- .active {
-  display: none;
+.hidden {
+  opacity: 0;
 }
