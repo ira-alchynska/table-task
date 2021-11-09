@@ -1,4 +1,4 @@
-import { countries, columns } from "./data.js";
+import { columns } from "./data.js";
 import { createCheckbox, addListenerCheckbox } from "./checkbox.js";
 import { makeSort } from "./sort.js";
 import { createFilterRow, addListenersFilter } from "./filter.js";
@@ -11,11 +11,19 @@ import {
 } from "./create-dropdown.js";
 import hideColumns from "./hide-columns.js";
 import { showColumns } from "./show-columns.js";
+import { fetchCountries } from "./fetch-countries.js";
 
 export const refs = {
   wrapper: document.querySelector("#wrapper"),
-  //headerCheckbox: document.querySelectorAll(".selectAll"),
 };
+
+let countries = [];
+fetchCountries()
+  .then((data) => {
+    countries = data;
+    createTable(columns, countries);
+  })
+  .catch((error) => console.error(error));
 
 //function which is creating the header of table
 function createHeaders(columns) {
@@ -33,7 +41,7 @@ function createHeaders(columns) {
   return headersRow;
 }
 
-function createHeaderCell(column) {
+export function createHeaderCell(column) {
   const headerBorder = document.createElement("div");
   headerBorder.classList.add("headerBorder");
   if (column.hidden) {
@@ -118,21 +126,24 @@ export function createTable(columns, countries) {
   tbody.append(...rows);
 
   //listeners
-  //addListenersSort();
+  addListenersSort();
   addListenerCheckbox();
   addListenersFilter();
-  //addListenersHideColumns();
-  //addEventListenerShowDropDown();
+  addEventListenerHideColumns();
+  addEventListenerShowColumns();
+  addEventListenerOpenDropDown();
+  addEventListenerMakeAscSort();
+  addEventListenerMakeDescSort();
   createDropDownList();
 }
-
-createTable(columns, countries);
 
 // add event listeners
 
 document.body.addEventListener("click", (e) => {
+  console.log(e);
   if (!e.target.matches(".btn-more")) closeDropDown();
 });
+
 // arrow sort
 function addListenersSort(order) {
   const headerColumn = document.querySelectorAll(".header-column");
@@ -147,7 +158,6 @@ function addListenersSort(order) {
     });
   });
 }
-addListenersSort();
 
 //asc
 function addEventListenerMakeAscSort() {
@@ -164,8 +174,6 @@ function addEventListenerMakeAscSort() {
   });
 }
 
-addEventListenerMakeAscSort();
-
 //desc
 function addEventListenerMakeDescSort() {
   const headerColumn = document.querySelectorAll(".header-column");
@@ -180,7 +188,6 @@ function addEventListenerMakeDescSort() {
     });
   });
 }
-addEventListenerMakeDescSort();
 
 //hide
 function addEventListenerHideColumns() {
@@ -195,7 +202,6 @@ function addEventListenerHideColumns() {
     });
   });
 }
-addEventListenerHideColumns();
 
 //show
 function addEventListenerShowColumns() {
@@ -210,7 +216,6 @@ function addEventListenerShowColumns() {
     });
   });
 }
-addEventListenerShowColumns();
 
 //drop down
 function addEventListenerOpenDropDown() {
@@ -224,4 +229,3 @@ function addEventListenerOpenDropDown() {
     });
   });
 }
-addEventListenerOpenDropDown();

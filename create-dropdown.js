@@ -1,10 +1,8 @@
-import { columns } from "./data.js";
-
 export function createDropDownList() {
   const buttonsMore = document.querySelectorAll(".btn-more");
   buttonsMore.forEach((button) => {
     const select = `
-    <ul class='select hidden'>
+    <ul class='select hidden-dropdown'>
           <li class="list asc"><button class= "button-list btn-asc">Sort by ASC</button></li>
           <li class="list desc"><button class="button-list btn-desc">Sort by DESC</button></li>
           <li class="list hide-column"><button class="button-list btn-hide">HIDE</button></li>
@@ -15,17 +13,15 @@ export function createDropDownList() {
   });
 }
 
-export function openDropDown(target, accessor) {
+export function openDropDown(target) {
   const toggleMenu = target.querySelector(".select");
   if (toggleMenu) {
-    const column = columns.find((col) => col.accessor === accessor);
-    column.toggle = false;
-    toggleMenu.classList.remove("hidden");
+    toggleMenu.classList.remove("hidden-dropdown");
   }
 }
 
 export function closeDropDown() {
   const toggleMenu = document.querySelectorAll(".select");
-  columns.forEach((col) => (col.toggle = true));
-  toggleMenu.forEach((ul) => ul.classList.add("hidden"));
+
+  toggleMenu.forEach((ul) => ul.classList.add("hidden-dropdown"));
 }

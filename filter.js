@@ -1,5 +1,14 @@
 import { createDataRows } from "./table.js";
-import { countries, columns } from "./data.js";
+import { columns } from "./data.js";
+
+import { fetchCountries } from "./fetch-countries.js";
+
+let countries = [];
+fetchCountries()
+  .then((data) => {
+    countries = data;
+  })
+  .catch((error) => console.error(error));
 
 function createFilterRow() {
   const filterRow = document.createElement("div");
@@ -16,7 +25,8 @@ function createFilterRow() {
   return filterRow;
 }
 
-function filterTableByName(event, columns) {
+function filterTableByName(event, columns, countries) {
+  console.log(countries);
   const tableRow = document.querySelector(".tbody");
   tableRow.innerHTML = "";
   const name = columns.find((c) => c.accessor === "name");
@@ -33,7 +43,7 @@ function filterTableByName(event, columns) {
 function addListenersFilter() {
   const input = document.querySelector(".filter-input");
   input.addEventListener("input", (event) => {
-    filterTableByName(event, columns);
+    filterTableByName(event, columns, countries);
   });
 }
 

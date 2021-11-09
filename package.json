@@ -4,7 +4,8 @@
   "description": "",
   "main": "table.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node table.js",
+    "server": "json-server --delay 200 --watch db.json --port 4040"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/ira-alchynska/table-task#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "json-server": "^0.17.0"
   },
   "devDependencies": {
