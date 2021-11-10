@@ -223,10 +223,6 @@ div.id-column-header {
   display: none;
 }
 
-/* .hidden:hover {
-  opacity: 1;
-} */
-
 .input {
   margin-left: 10px;
   margin-right: 10px;
@@ -293,4 +289,80 @@ div.id-column-header {
 }
 .hidden-dropdown {
   display: none;
+}
+
+/* modal */
+.modal {
+}
+.modal.open .modal-overlay,
+.modal.open .modal-window {
+  opacity: 1;
+  z-index: 10;
+}
+
+.modal .modal-window,
+.modal .modal-overlay {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(129, 124, 124, 0.7);
+  transition: background-color 0.2s ease-in;
+}
+
+.modal-window {
+  width: 500px;
+  height: 450px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 100px auto;
+}
+
+.modal-header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+.modal-close {
+  cursor: pointer;
+  color: black;
+  font-weight: 700;
+}
+.close {
+  display: none;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.label-form {
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+.input-form {
+  margin-left: 15px;
+  margin-bottom: 5px;
+  height: 30px;
+  width: 200px;
+}
+
+.button-form {
+  width: 80px;
+  height: 30px;
+  align-self: center;
+  margin-top: 20px;
 }

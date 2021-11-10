@@ -126,6 +126,8 @@ export function createTable(columns, countries) {
   tbody.append(...rows);
 
   //listeners
+  createModal();
+
   addListenersSort();
   addListenerCheckbox();
   addListenersFilter();
@@ -135,6 +137,9 @@ export function createTable(columns, countries) {
   addEventListenerMakeAscSort();
   addEventListenerMakeDescSort();
   createDropDownList();
+  addEventListenerOnOpenModal();
+  addEventListenerOnCloseModal();
+  addEventListenerOnOverlayClose();
 }
 
 // add event listeners
@@ -228,4 +233,117 @@ function addEventListenerOpenDropDown() {
       }
     });
   });
+}
+
+//open modal
+
+function createModal() {
+  const rows = document.querySelectorAll(".table-row");
+  rows.forEach((row) => {
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+
+    modal.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="modal-overlay" data-close = "true">
+        <div class="modal-window">
+          <div class="modal-header">
+            <span class="modal-title">Update Country Data</span>
+            <span class="modal-close" data-close = "true">&times;</span>
+          </div>
+          <div class="modal-content"></div>
+        </div>
+      </div> `
+    );
+    row.appendChild(modal);
+
+    return modal;
+  });
+  CreateModalForm();
+}
+
+function onOpenModal() {
+  const modalRef = document.querySelector(".modal");
+  modalRef.classList.add("open");
+}
+
+function onCloseModal() {
+  const modalRef = document.querySelector(".modal");
+  modalRef.classList.remove("modal-none");
+}
+
+function addEventListenerOnOpenModal() {
+  const rows = document.querySelectorAll(".table-row");
+  rows.forEach((row) => {
+    row.addEventListener("click", (event) => {
+      if (event.target) {
+        onOpenModal();
+      }
+    });
+  });
+}
+
+function addEventListenerOnCloseModal() {
+  const closeModal = document.querySelector(".modal-close");
+  closeModal.addEventListener("click", (event) => {
+    if (event.target === closeModal) onCloseModal();
+  });
+}
+
+function addEventListenerOnOverlayClose() {
+  const overlayRef = document.querySelector(".modal-overlay");
+  overlayRef.addEventListener("click", (event) => {
+    if (event.target == overlayRef) {
+      overlayRef.style.display = "none";
+      onCloseModal();
+    }
+  });
+}
+
+function CreateModalForm() {
+  const modalContent = document.querySelector(".modal-content");
+  const modalForm = document.createElement("form");
+  modalForm.classList.add("modal-form");
+  modalForm.insertAdjacentHTML(
+    "afterbegin",
+    `<label class="label-form" htmlFor="id">ID</label>
+    <input type="text" name="id" placeholder="Edit id"  class="input-form"/>
+    <label class="label-form" htmlFor="name">NAME</label>
+    <input
+      type="text"
+      name="country"
+      placeholder="Edit country"
+      class="input-form"
+    />
+    <label class="label-form" htmlFor="iso">ISO</label>
+    <input type="text" name="iso" placeholder="Edit iso" class="input-form"/>
+    <label class="label-form" htmlFor="capital">CAPITAL</label>
+    <input
+      type="text"
+      name="capital"
+      placeholder="Edit capital"
+      class="input-form"
+      
+    />
+    <label class="label-form" htmlFor="currency">CURRENCY</label>
+    <input
+      type="text"
+      name="currency"
+      placeholder="Edit currency"
+      class="input-form"
+    />
+    <label class="label-form" htmlFor="phone_code">PHONE_CODE</label>
+    <input
+      type="text"
+      name="phone_code"
+      placeholder="Edit phone_code"
+      class="input-form"
+    />
+
+    <button type="submit" class="button-form">Edit</button>
+  `
+  );
+  modalContent.appendChild(modalForm);
+  console.log(modalForm);
+  return modalForm;
 }
