@@ -18,6 +18,7 @@ export const refs = {
 };
 
 let countries = [];
+
 fetchCountries()
   .then((data) => {
     countries = data;
@@ -80,6 +81,7 @@ export function createDataRows(columns, countries) {
   const rows = countries.map((country) => {
     const row = document.createElement("div");
     row.classList.add("table-row");
+    row.setAttribute("data-id", country.id);
     // create checkboxes for the bodyRows
     const bodyCheckbox = createCheckbox();
     row.append(bodyCheckbox);
@@ -139,13 +141,12 @@ export function createTable(columns, countries) {
   createDropDownList();
   addEventListenerOnOpenModal();
   addEventListenerOnCloseModal();
-  addEventListenerOnOverlayClose();
+  //addEventListenerOnOverlayClose();
 }
 
 // add event listeners
 
 document.body.addEventListener("click", (e) => {
-  console.log(e);
   if (!e.target.matches(".btn-more")) closeDropDown();
 });
 
@@ -235,115 +236,152 @@ function addEventListenerOpenDropDown() {
   });
 }
 
-//open modal
-
-function createModal() {
-  const rows = document.querySelectorAll(".table-row");
-  rows.forEach((row) => {
-    const modal = document.createElement("div");
-    modal.classList.add("modal");
-
-    modal.insertAdjacentHTML(
-      "afterbegin",
-      `<div class="modal-overlay" data-close = "true">
-        <div class="modal-window">
-          <div class="modal-header">
-            <span class="modal-title">Update Country Data</span>
-            <span class="modal-close" data-close = "true">&times;</span>
-          </div>
-          <div class="modal-content"></div>
-        </div>
-      </div> `
-    );
-    row.appendChild(modal);
-
-    return modal;
-  });
-  CreateModalForm();
-}
-
 function onOpenModal() {
   const modalRef = document.querySelector(".modal");
-  modalRef.classList.add("open");
+  modalRef.classList.remove("modal-close");
 }
 
 function onCloseModal() {
   const modalRef = document.querySelector(".modal");
-  modalRef.classList.remove("modal-none");
+  modalRef.classList.add("modal-close");
 }
 
 function addEventListenerOnOpenModal() {
-  const rows = document.querySelectorAll(".table-row");
-  rows.forEach((row) => {
-    row.addEventListener("click", (event) => {
-      if (event.target) {
-        onOpenModal();
-      }
-    });
-  });
-}
+  const tbody = document.querySelector(".tbody");
+  tbody.addEventListener("click", (e) => {
+    let target = e.target;
+    let closest = target.closest(".table-row");
 
-function addEventListenerOnCloseModal() {
-  const closeModal = document.querySelector(".modal-close");
-  closeModal.addEventListener("click", (event) => {
-    if (event.target === closeModal) onCloseModal();
-  });
-}
-
-function addEventListenerOnOverlayClose() {
-  const overlayRef = document.querySelector(".modal-overlay");
-  overlayRef.addEventListener("click", (event) => {
-    if (event.target == overlayRef) {
-      overlayRef.style.display = "none";
-      onCloseModal();
+    if (closest) {
+      let id = closest.dataset.id * 1;
+      let data = countries.find((i) => i.id === id);
+      createContentModal(data);
+      onOpenModal();
     }
   });
 }
 
-function CreateModalForm() {
-  const modalContent = document.querySelector(".modal-content");
-  const modalForm = document.createElement("form");
-  modalForm.classList.add("modal-form");
-  modalForm.insertAdjacentHTML(
-    "afterbegin",
-    `<label class="label-form" htmlFor="id">ID</label>
-    <input type="text" name="id" placeholder="Edit id"  class="input-form"/>
-    <label class="label-form" htmlFor="name">NAME</label>
+function addEventListenerOnCloseModal() {
+  const closeModal = document.querySelector(".btnCloseModal");
+  closeModal.addEventListener("click", (e) => onCloseModal());
+}
+
+// function addEventListenerOnOverlayClose() {
+//   const overlayRef = document.querySelector(".modal-overlay");
+//   overlayRef.addEventListener("click", (e) => {
+//     if (e.currentTarget) onCloseModal();
+//   });
+// }
+
+function createModal() {
+  const modal = document.createElement("div");
+  modal.classList.add("modal", "modal-close");
+
+  const modalForm = `<div class="modal-overlay" data-close = "true">
+        <div class="modal-window">
+          <div class="modal-header">
+            <span class="modal-title">Update Country Data</span>
+            <span class="btnCloseModal" data-close = "true">&times;</span>
+          </div>
+          <div class="modal-content"></div>
+        </div>
+      </div> `;
+
+  modal.insertAdjacentHTML("afterbegin", modalForm);
+
+  document.body.append(modal);
+}
+
+function createContentModal(
+  rowData = {
+    id: "",
+    name: "",
+    iso3: "",
+    phone_code: "",
+    capital: "",
+    currency: "",
+  }
+) {
+  const content = `
+
+     <form class="modal-form">   
+<label class="label-form" htmlFor="id">ID</label>
+          <input type="text" name="id" placeholder="Edit id" value="${rowData.id}" class="input-form"/>
+          
+    <label class="label-form" htmlFor="name" >NAME</label>
     <input
       type="text"
-      name="country"
-      placeholder="Edit country"
+      name="name"
+      placeholder="country name"
       class="input-form"
+      value="${rowData.name}"
     />
+    
     <label class="label-form" htmlFor="iso">ISO</label>
-    <input type="text" name="iso" placeholder="Edit iso" class="input-form"/>
+    <input type="text" name="iso3" placeholder="Edit iso" value="${rowData.iso3}"  class="input-form"/>
+    
     <label class="label-form" htmlFor="capital">CAPITAL</label>
     <input
       type="text"
       name="capital"
       placeholder="Edit capital"
       class="input-form"
-      
+      value="${rowData.capital}"
     />
+    
     <label class="label-form" htmlFor="currency">CURRENCY</label>
     <input
       type="text"
       name="currency"
       placeholder="Edit currency"
       class="input-form"
+      value="${rowData.currency}"
     />
+    
     <label class="label-form" htmlFor="phone_code">PHONE_CODE</label>
     <input
       type="text"
       name="phone_code"
       placeholder="Edit phone_code"
       class="input-form"
+      value="${rowData.phone_code}"
     />
 
-    <button type="submit" class="button-form">Edit</button>
-  `
-  );
-  modalContent.appendChild(modalForm);
-  console.log(modalForm);
-  return modalForm;
+    <button type="submit" class="btnEditRow">Edit</button>
+          </div>
+</form>  
+`;
+
+  document.querySelector(".modal-content").innerHTML = content;
+  listenerFormData();
+}
+function listenerFormData() {
+  const formRef = document.querySelector(".modal-form");
+  formRef.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formRef = e.target;
+    const formData = new FormData(formRef);
+    const submittedData = {};
+    formData.forEach((value, key) => {
+      submittedData[key] = value;
+    });
+    patchRequest(submittedData);
+  });
+}
+
+const BASE_URL = "http://localhost:4040/countries/";
+async function patchRequest(country) {
+  const id = country.id;
+  const options = {
+    method: "PATCH",
+    body: JSON.stringify(country),
+    headers: { "content-type": "application/json" },
+  };
+  const response = await fetch(BASE_URL + id, options);
+  if (response.ok) {
+    const result = await response.json();
+    const row = document.querySelector(`[data-id="${id}"]`);
+    const { id, name, iso3, phone_code, capital, currency } = result;
+  }
+  console.log(result);
 }

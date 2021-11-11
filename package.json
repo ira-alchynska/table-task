@@ -5,7 +5,7 @@
   "main": "table.js",
   "scripts": {
     "start": "node table.js",
-    "server": "json-server --delay 200 --watch db.json --port 4040"
+    "server": "json-server --delay 200 --watch db.json --port 4050"
   },
   "repository": {
     "type": "git",
