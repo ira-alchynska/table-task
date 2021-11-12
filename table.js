@@ -353,7 +353,7 @@ function createContentModal(
 `;
 
   document.querySelector(".modal-content").innerHTML = content;
-  listenerFormData();
+  listenerFormData(countries);
 }
 function listenerFormData() {
   const formRef = document.querySelector(".modal-form");
@@ -365,11 +365,19 @@ function listenerFormData() {
     formData.forEach((value, key) => {
       submittedData[key] = value;
     });
-    patchRequest(submittedData);
+    patchRequest(submittedData).then(() => {
+      fetchCountries().then((data) => {
+        countries = data;
+        const tableBody = document.querySelector(".tbody");
+        tableBody.innerHTML = "";
+        const rows = createDataRows(columns, countries);
+        tableBody.append(...rows);
+      });
+    });
   });
 }
 
-const BASE_URL = "http://localhost:4040/countries/";
+const BASE_URL = "http://localhost:4050/countries/";
 async function patchRequest(country) {
   const id = country.id;
   const options = {
@@ -380,8 +388,6 @@ async function patchRequest(country) {
   const response = await fetch(BASE_URL + id, options);
   if (response.ok) {
     const result = await response.json();
-    const row = document.querySelector(`[data-id="${id}"]`);
-    const { id, name, iso3, phone_code, capital, currency } = result;
+    return result;
   }
-  console.log(result);
 }

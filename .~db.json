@@ -2,7 +2,7 @@
   "countries": [
     {
       "id": 1,
-      "name": "USA",
+      "name": "Ukraine",
       "iso3": "UK",
       "iso2": "AF",
       "numeric_code": "004",
@@ -44,11 +44,11 @@
     },
     {
       "id": 2,
-      "name": "Aland Islands",
+      "name": "Aland 1",
       "iso3": "ALA",
       "iso2": "AX",
       "numeric_code": "248",
-      "phone_code": "+358-18",
+      "phone_code": "457985",
       "capital": "Mariehamn",
       "currency": "EUR",
       "currency_symbol": "€",
@@ -86,7 +86,7 @@
     },
     {
       "id": 3,
-      "name": "Albania",
+      "name": "Albania1",
       "iso3": "ALB",
       "iso2": "AL",
       "numeric_code": "008",

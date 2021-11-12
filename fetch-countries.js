@@ -1,5 +1,5 @@
 //import axios from "axios";
-const BASE_URL = "http://localhost:4040/countries/";
+const BASE_URL = "http://localhost:4050/countries/";
 
 export async function fetchCountries() {
   let response = await fetch(BASE_URL);
