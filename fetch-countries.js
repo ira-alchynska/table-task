@@ -1,13 +1,27 @@
-//import axios from "axios";
-const BASE_URL = "http://localhost:4050/countries/";
+export async function fetchCountries(searchQuery, page = 1) {
+  const BASE_URL = `http://localhost:3030/countries/?_limit=${searchQuery}&_page=${page}`;
 
-export async function fetchCountries() {
   let response = await fetch(BASE_URL);
   let data = await response.json();
-  //console.log(data);
+
   return data.map(({ id, name, iso3, phone_code, capital, currency }) => {
     const countries = { id, name, iso3, phone_code, capital, currency };
-    //console.log(countries);
+
     return countries;
   });
+}
+
+export async function patchRequest(country) {
+  const BASE_URL = `http://localhost:3030/countries/`;
+  const id = country.id;
+  const options = {
+    method: "PATCH",
+    body: JSON.stringify(country),
+    headers: { "content-type": "application/json" },
+  };
+  const response = await fetch(BASE_URL + id, options);
+  if (response.ok) {
+    const result = await response.json();
+    return result;
+  }
 }

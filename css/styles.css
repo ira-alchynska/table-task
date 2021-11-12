@@ -358,3 +358,13 @@ div.id-column-header {
   align-self: center;
   margin-top: 20px;
 }
+
+.btn-primary {
+  display: block;
+  margin-left: 500px;
+  border-radius: 2px;
+  background: skyblue;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+}

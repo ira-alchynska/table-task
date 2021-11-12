@@ -2,7 +2,7 @@ import { columns } from "./data.js";
 import { createCheckbox, addListenerCheckbox } from "./checkbox.js";
 import { makeSort } from "./sort.js";
 import { createFilterRow, addListenersFilter } from "./filter.js";
-//import addListenersHideColumns from "./hide-columns.js";
+
 import { createButton } from "./button.js";
 import {
   createDropDownList,
@@ -11,17 +11,23 @@ import {
 } from "./create-dropdown.js";
 import hideColumns from "./hide-columns.js";
 import { showColumns } from "./show-columns.js";
-import { fetchCountries } from "./fetch-countries.js";
+import { fetchCountries, patchRequest } from "./fetch-countries.js";
+
+import { createModal } from "./modal.js";
+import { createContentModal } from "./createContentModal.js";
 
 export const refs = {
   wrapper: document.querySelector("#wrapper"),
 };
 
-let countries = [];
+export let countries = [];
+let searchQuery = "";
+let page = 1;
 
 fetchCountries()
   .then((data) => {
     countries = data;
+    page += 1;
     createTable(columns, countries);
   })
   .catch((error) => console.error(error));
@@ -266,96 +272,7 @@ function addEventListenerOnCloseModal() {
   closeModal.addEventListener("click", (e) => onCloseModal());
 }
 
-// function addEventListenerOnOverlayClose() {
-//   const overlayRef = document.querySelector(".modal-overlay");
-//   overlayRef.addEventListener("click", (e) => {
-//     if (e.currentTarget) onCloseModal();
-//   });
-// }
-
-function createModal() {
-  const modal = document.createElement("div");
-  modal.classList.add("modal", "modal-close");
-
-  const modalForm = `<div class="modal-overlay" data-close = "true">
-        <div class="modal-window">
-          <div class="modal-header">
-            <span class="modal-title">Update Country Data</span>
-            <span class="btnCloseModal" data-close = "true">&times;</span>
-          </div>
-          <div class="modal-content"></div>
-        </div>
-      </div> `;
-
-  modal.insertAdjacentHTML("afterbegin", modalForm);
-
-  document.body.append(modal);
-}
-
-function createContentModal(
-  rowData = {
-    id: "",
-    name: "",
-    iso3: "",
-    phone_code: "",
-    capital: "",
-    currency: "",
-  }
-) {
-  const content = `
-
-     <form class="modal-form">   
-<label class="label-form" htmlFor="id">ID</label>
-          <input type="text" name="id" placeholder="Edit id" value="${rowData.id}" class="input-form"/>
-          
-    <label class="label-form" htmlFor="name" >NAME</label>
-    <input
-      type="text"
-      name="name"
-      placeholder="country name"
-      class="input-form"
-      value="${rowData.name}"
-    />
-    
-    <label class="label-form" htmlFor="iso">ISO</label>
-    <input type="text" name="iso3" placeholder="Edit iso" value="${rowData.iso3}"  class="input-form"/>
-    
-    <label class="label-form" htmlFor="capital">CAPITAL</label>
-    <input
-      type="text"
-      name="capital"
-      placeholder="Edit capital"
-      class="input-form"
-      value="${rowData.capital}"
-    />
-    
-    <label class="label-form" htmlFor="currency">CURRENCY</label>
-    <input
-      type="text"
-      name="currency"
-      placeholder="Edit currency"
-      class="input-form"
-      value="${rowData.currency}"
-    />
-    
-    <label class="label-form" htmlFor="phone_code">PHONE_CODE</label>
-    <input
-      type="text"
-      name="phone_code"
-      placeholder="Edit phone_code"
-      class="input-form"
-      value="${rowData.phone_code}"
-    />
-
-    <button type="submit" class="btnEditRow">Edit</button>
-          </div>
-</form>  
-`;
-
-  document.querySelector(".modal-content").innerHTML = content;
-  listenerFormData(countries);
-}
-function listenerFormData() {
+export function listenerFormData() {
   const formRef = document.querySelector(".modal-form");
   formRef.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -366,7 +283,7 @@ function listenerFormData() {
       submittedData[key] = value;
     });
     patchRequest(submittedData).then(() => {
-      fetchCountries().then((data) => {
+      fetchCountries(searchQuery, page).then((data) => {
         countries = data;
         const tableBody = document.querySelector(".tbody");
         tableBody.innerHTML = "";
@@ -377,17 +294,22 @@ function listenerFormData() {
   });
 }
 
-const BASE_URL = "http://localhost:4050/countries/";
-async function patchRequest(country) {
-  const id = country.id;
-  const options = {
-    method: "PATCH",
-    body: JSON.stringify(country),
-    headers: { "content-type": "application/json" },
-  };
-  const response = await fetch(BASE_URL + id, options);
-  if (response.ok) {
-    const result = await response.json();
-    return result;
-  }
+function createLoadMoreBtn() {
+  const primaryBtn = `<button type='button' class="btn-primary" 
+  data-action="load-more">Load more...</button>`;
+  refs.wrapper.insertAdjacentHTML("afterend", primaryBtn);
 }
+createLoadMoreBtn();
+
+const loadMoreBtn = document.querySelector('[data-action="load-more"]');
+loadMoreBtn.addEventListener("click", () => {
+  fetchCountries(searchQuery, page).then((data) => {
+    countries = data;
+    page += 1;
+    console.log(countries);
+    const tableBody = document.querySelector(".tbody");
+    //tableBody.innerHTML = "";
+    const rows = createDataRows(columns, countries);
+    tableBody.append(...rows);
+  });
+});
