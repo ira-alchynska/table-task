@@ -1,342 +1,313 @@
-const countries = [
-  {
-    id: 2,
-    name: "Aland Islands",
-    iso3: "ALA",
-    phone_code: "+358-18",
-    capital: "Mariehamn",
-    currency: "EUR",
-  },
-  {
-    id: 1,
-    name: "Afghanistan",
-    iso3: "AFG",
-    phone_code: "93",
-    capital: "Kabul",
-    currency: "AFN",
-  },
-  {
-    id: 3,
-    name: "Albania",
-    iso3: "ALB",
-    phone_code: "355",
-    capital: "Tirana",
-    currency: "ALL",
-  },
-  {
-    id: 4,
-    name: "Algeria",
-    iso3: "DZA",
-    phone_code: "213",
-    capital: "Algiers",
-    currency: "DZD",
-  },
+import { columns } from "./data.js";
+import { createCheckbox, addListenerCheckbox } from "./checkbox.js";
+import { makeSort } from "./sort.js";
+import { createFilterRow, addListenersFilter } from "./filter.js";
 
-  {
-    id: 6,
-    name: "Andorra",
-    iso3: "AND",
-    phone_code: "376",
-    capital: "Andorra la Vella",
-    currency: "EUR",
-  },
-  {
-    id: 7,
-    name: "Angola",
-    iso3: "AGO",
-    phone_code: "244",
-    capital: "Luanda",
-    currency: "AOA",
-  },
-  {
-    id: 5,
-    name: "American Samoa",
-    iso3: "ASM",
-    phone_code: "+1-684",
-    capital: "Pago Pago",
-    currency: "USD",
-  },
-  {
-    id: 8,
-    name: "Anguilla",
-    iso3: "AIA",
-    phone_code: "+1-264",
-    capital: "The Valley",
-    currency: "AOA",
-  },
-  {
-    id: 9,
-    name: "Antarctica",
-    iso3: "ATA",
-    phone_code: "672",
-    capital: "",
-    currency: "AAD",
-  },
-  {
-    id: 10,
-    name: "Antigua And Barbuda",
-    iso3: "ATG",
-    phone_code: "+1-268",
-    capital: "St. John's",
-    currency: "XCD",
-  },
-  {
-    id: 11,
-    name: "Argentina",
-    iso3: "ARG",
-    phone_code: "54",
-    capital: "Buenos Aires",
-    currency: "ARS",
-  },
-  {
-    id: 12,
-    name: "Armenia",
-    iso3: "ARM",
-    phone_code: "374",
-    capital: "Yerevan",
-    currency: "AMD",
-  },
-  {
-    id: 13,
-    name: "Aruba",
-    iso3: "ABW",
-    phone_code: "297",
-    capital: "Oranjestad",
-    currency: "AWG",
-  },
-  {
-    id: 14,
-    name: "Australia",
-    iso3: "AUS",
-    phone_code: "61",
-    capital: "Canberra",
-    currency: "AUD",
-  },
-  {
-    id: 15,
-    name: "Austria",
-    iso3: "AUT",
-    phone_code: "43",
-    capital: "Vienna",
-    currency: "EUR",
-  },
-  {
-    id: 16,
-    name: "Azerbaijan",
-    iso3: "AZE",
-    phone_code: "994",
-    capital: "Baku",
-    currency: "AZN",
-  },
-  {
-    id: 17,
-    name: "Bahamas The",
-    iso3: "BHS",
-    phone_code: "+1-242",
-    capital: "Nassau",
-    currency: "BSD",
-  },
-  {
-    id: 18,
-    name: "Bahrain",
-    iso3: "BHR",
-    phone_code: "973",
-    capital: "Manama",
-    currency: "BHD",
-  },
-  {
-    id: 19,
-    name: "Bangladesh",
-    iso3: "BGD",
-    phone_code: "880",
-    capital: "Dhaka",
-    currency: "BDT",
-  },
-  {
-    id: 20,
-    name: "Barbados",
-    iso3: "BRB",
-    phone_code: "+1-246",
-    capital: "Bridgetown",
-    currency: "BBD",
-  },
-];
+import { createButton } from "./button.js";
+import {
+  createDropDownList,
+  openDropDown,
+  closeDropDown,
+} from "./create-dropdown.js";
+import hideColumns from "./hide-columns.js";
+import { showColumns } from "./show-columns.js";
+import { fetchCountries, patchRequest } from "./fetch-countries.js";
 
-const columns = [
-  { label: "Id", accessor: "id", order: null, sortingType: "number" },
-  { label: "Name", accessor: "name", order: null, sortingType: "string" },
-  { label: "Iso", accessor: "iso3", order: null, sortingType: "string" },
-  { label: "Capital", accessor: "capital", order: null, sortingType: "string" },
-  {
-    label: "Currency",
-    accessor: "currency",
-    order: null,
-    sortingType: "string",
-  },
+import { createModal } from "./modal.js";
+import { createContentModal } from "./createContentModal.js";
 
-  {
-    label: "Phone-code",
-    accessor: "phone_code",
-    order: null,
-    sortingType: "number",
-  },
-];
-
-const refs = {
+export const refs = {
   wrapper: document.querySelector("#wrapper"),
-  //headerCheckbox: document.querySelectorAll(".selectAll"),
 };
 
-//function which is creating the header of table
-function createHeaders(columns) {
-  //row of headers
+export let countries = [];
+let limit = 5;
+let page = 1;
+
+fetchCountries()
+  .then((data) => {
+    countries = data;
+    page += 1;
+    createTable(columns, countries);
+  })
+  .catch((error) => console.error(error));
+
+function createTableHeader(columns) {
+  //row of header
   const headersRow = document.createElement("div");
   headersRow.classList.add("header-row");
   //checkbox for header
   const headerCheckbox = createCheckbox();
   headersRow.append(headerCheckbox);
   headerCheckbox.classList.add("selectAll");
-
-  const headerCells = columns.map((column) => {
-    const headerBorder = document.createElement("div");
-    headerBorder.classList.add("headerBorder");
-    const headerCell = document.createElement("div");
-    headerCell.classList.add("header-column");
-    headerCell.setAttribute('data-accessor', column.accessor);
-    headerCell.setAttribute('data-sortingtype', column.sortingType);
-    
-
-    headerCell.textContent = column.label;
-    headerBorder.append(headerCell);
-    //button add
-
-    const arrow = "fas fa-arrow-up";
-    const more = "fas fa-ellipsis-v";
-    const iconArrow = createButton(arrow);
-
-    const iconMore = createButton(more);
-    const buttonWrapper = document.createElement("div");
-    buttonWrapper.classList.add("button-wrapper");
-    buttonWrapper.append(iconArrow, iconMore);
-    headerCell.append(buttonWrapper);
-
-    return headerBorder;
-  });
+  const headerCells = columns.map((column) => createHeaderCell(column));
   //add all cells to header
-
   headersRow.append(...headerCells);
 
   return headersRow;
 }
-//the function that creates body of table it takes array of columns and countries
-function createCells(columns, countries) {
+
+export function createHeaderCell(column) {
+  const headerBorder = document.createElement("div");
+  headerBorder.classList.add("headerBorder");
+  if (column.hidden) {
+    headerBorder.classList.add("table-column-hidden");
+  }
+  const headerCell = document.createElement("div");
+  headerCell.classList.add("header-column");
+
+  headerCell.setAttribute("data-accessor", column.accessor);
+  headerCell.setAttribute("data-sorting", column.sortingType);
+  headerCell.setAttribute("data-hidden", column.hidden);
+  headerCell.setAttribute("data-toggle", column.toggle);
+  headerCell.textContent = column.label;
+  headerBorder.append(headerCell);
+  //button add
+
+  const arrow = "fas fa-arrow-up";
+  const more = "fas fa-ellipsis-v";
+  const btnArrow = "btn-arrow";
+  const btnMore = "btn-more";
+  const iconArrow = createButton(arrow, btnArrow);
+
+  const buttonMore = createButton(more, btnMore, column.accessor);
+
+  const buttonWrapper = document.createElement("div");
+  buttonWrapper.classList.add("button-wrapper");
+  buttonWrapper.append(iconArrow, buttonMore);
+  headerCell.append(buttonWrapper);
+
+  return headerBorder;
+}
+
+//the function that creates body of table
+export function createTableRows(columns, countries) {
   // row in body table
   const rows = countries.map((country) => {
     const row = document.createElement("div");
     row.classList.add("table-row");
+    row.setAttribute("data-id", country.id);
     // create checkboxes for the bodyRows
     const bodyCheckbox = createCheckbox();
     row.append(bodyCheckbox);
     //created cells in the body table
-    const cells = columns.map((column) => {
-      const cell = document.createElement("div");
-      cell.classList.add("table-column");
-      // content of table
-      //header accessor -the name of the key in the object
-      cell.textContent = country[column.accessor];
-
-      return cell;
-    });
+    const cells = columns.map((column) => createTableCells(country, column));
 
     row.append(...cells);
     return row;
   });
-
   return rows;
 }
+
+function createTableCells(country, column) {
+  const cell = document.createElement("div");
+  cell.classList.add("table-column");
+  if (column.hidden) {
+    cell.classList.add("table-column-hidden");
+  }
+
+  cell.textContent = country[column.accessor];
+
+  return cell;
+}
+
 // main function for the table
-function createTable(columns, countries) {
-  
+export function createTable(columns, countries) {
   const table = document.createElement("table");
   table.classList.add("table");
   const thead = document.createElement("div");
 
   const tbody = document.createElement("div");
+  tbody.classList.add("tbody");
+  const headerRow = createTableHeader(columns);
 
-  const tColumns = createHeaders(columns);
-  const rows = createCells(columns, countries);
+  const filterInput = createFilterRow();
+
+  const rows = createTableRows(columns, countries);
 
   refs.wrapper.append(table);
   table.append(thead);
   table.append(tbody);
-  thead.append(tColumns);
+  thead.append(headerRow, filterInput);
+
   tbody.append(...rows);
-  // buttons
+
+  //listeners
+  createModal();
+
+  addListenersSort();
+  addListenerCheckbox();
+  addListenersFilter();
+  addListenerHideColumns();
+  addListenerShowColumns();
+  addListenerOpenDropDown();
+  addListenerMakeAscSort();
+  addListenerMakeDescSort();
+  createDropDownList();
+  addListenerOnOpenModal();
+  addListenerOnCloseModal();
+  //addEventListenerOnOverlayClose();
 }
 
-createTable(columns, countries);
+// add event listeners
 
-function createButton(fontAwesomeIcon) {
-  const button = document.createElement("button");
-  button.classList.add("button");
-  const icon = document.createElement("i");
-  const iconarr = fontAwesomeIcon.split(" ");
-  iconarr.map((cl) => {
-    icon.classList.add(cl);
-  });
-  button.appendChild(icon);
-
-  return button;
-}
-
-function createCheckbox() {
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
-  checkbox.classList.add("input");
-  return checkbox;
-}
-
-const selectAllRef = document.querySelector(".selectAll");
-selectAllRef.addEventListener("click", (event) => {
-  const allCheckboxes = document.querySelectorAll(".input");
-  allCheckboxes.forEach((checkbox) => {
-    checkbox.checked = event.target.checked;
-  });
+document.body.addEventListener("click", (e) => {
+  if (!e.target.matches(".btn-more")) closeDropDown();
 });
 
-function bubbleSort(countries, accessor, sortingType) {
-  const newArr = [...countries];
+// arrow sort
+function addListenersSort(order) {
+  const headerColumn = document.querySelectorAll(".header-column");
+  headerColumn.forEach((th) => {
+    th.addEventListener("click", (event) => {
+      const accessor = event.currentTarget.dataset.accessor;
+      const sortingType = event.currentTarget.dataset.sorting;
 
-  for (let i = 0; i < newArr.length - 1; i++) {
-    for (let j = 0; j < newArr.length - 1 - i; j++) {
-      if (sortingType === "number") {
-        if (newArr[j][accessor] > newArr[j + 1][accessor]) {
-          [newArr[j], newArr[j + 1]] = [newArr[j + 1], newArr[j]];
-        }
-      } else if (sortingType === "string") {
-        if (newArr[j][accessor].localeCompare(newArr[j + 1][accessor] ) > 0) {
-          [newArr[j], newArr[j + 1]] = [newArr[j + 1], newArr[j]];
-        }
+      if (event.target.closest("button.btn-arrow")) {
+        makeSort(accessor, sortingType, order);
       }
-    }
-  }
-  return newArr;
+    });
+  });
 }
 
-//const result = bubbleSort(countries, "id", "number");
+//asc
+function addListenerMakeAscSort() {
+  const headerColumn = document.querySelectorAll(".header-column");
+  headerColumn.forEach((th) => {
+    th.addEventListener("click", (event) => {
+      const accessor = event.currentTarget.dataset.accessor;
+      const sortingType = event.currentTarget.dataset.sorting;
+      if (event.target.closest("button .btn-asc")) {
+        console.log("sort asc");
+        makeSort(accessor, sortingType);
+      }
+    });
+  });
+}
 
-//const arrowButton = document.querySelectorAll(".fa-arrow-up");
-const headerColumn = document.querySelectorAll(".header-column");
-headerColumn.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    
-    const accessor = event.currentTarget.dataset.accessor;
-    
-    const sortingType = event.currentTarget.dataset.sortingtype;
-    console.log(accessor, sortingType)
-    let sortage = bubbleSort(countries, accessor, sortingType);
-    
-    refs.wrapper.innerHTML = "";
-    createTable(columns, sortage);
+//desc
+function addListenerMakeDescSort() {
+  const headerColumn = document.querySelectorAll(".header-column");
+  headerColumn.forEach((th) => {
+    th.addEventListener("click", (event) => {
+      const accessor = event.currentTarget.dataset.accessor;
+      const sortingType = event.currentTarget.dataset.sorting;
+      if (event.target.closest("button .btn-desc")) {
+        console.log("sort desc");
+        makeSort(accessor, sortingType);
+      }
+    });
+  });
+}
+
+//hide
+function addListenerHideColumns() {
+  const headerColumn = document.querySelectorAll(".header-column");
+  headerColumn.forEach((th) => {
+    th.addEventListener("click", (event) => {
+      const accessor = event.currentTarget.dataset.accessor;
+      if (event.target.closest(".btn-hide")) {
+        console.log("hide");
+        hideColumns(accessor);
+      }
+    });
+  });
+}
+
+//show
+function addListenerShowColumns() {
+  const headerColumn = document.querySelectorAll(".header-column");
+  headerColumn.forEach((th) => {
+    th.addEventListener("click", (event) => {
+      const accessor = event.currentTarget.dataset.accessor;
+      if (event.target.closest(".btn-show")) {
+        console.log("show");
+        showColumns(accessor);
+      }
+    });
+  });
+}
+
+//drop down
+function addListenerOpenDropDown() {
+  const headerColumn = document.querySelectorAll(".header-column");
+  headerColumn.forEach((th) => {
+    th.addEventListener("click", (event) => {
+      const accessor = event.currentTarget.dataset.accessor;
+      if (event.target.closest(".btn-more")) {
+        openDropDown(event.target, accessor);
+      }
+    });
+  });
+}
+
+function onOpenModal() {
+  const modalRef = document.querySelector(".modal");
+  modalRef.classList.remove("modal-close");
+}
+
+function onCloseModal() {
+  const modalRef = document.querySelector(".modal");
+  modalRef.classList.add("modal-close");
+}
+
+function addListenerOnOpenModal() {
+  const tbody = document.querySelector(".tbody");
+  tbody.addEventListener("click", (e) => {
+    let target = e.target;
+    let closest = target.closest(".table-row");
+
+    if (closest) {
+      let id = closest.dataset.id * 1;
+      let data = countries.find((i) => i.id === id);
+      createContentModal(data);
+      onOpenModal();
+    }
+  });
+}
+
+function addListenerOnCloseModal() {
+  const closeModal = document.querySelector(".btnCloseModal");
+  closeModal.addEventListener("click", (e) => onCloseModal());
+}
+
+export function addListenerFormData() {
+  const formRef = document.querySelector(".modal-form");
+  formRef.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formRef = e.target;
+    const formData = new FormData(formRef);
+    const submittedData = {};
+    formData.forEach((value, key) => {
+      submittedData[key] = value;
+    });
+    patchRequest(submittedData).then(() => {
+      fetchCountries(limit, page).then((data) => {
+        countries = data;
+        const tableBody = document.querySelector(".tbody");
+        tableBody.innerHTML = "";
+        const rows = createTableRows(columns, countries);
+        tableBody.append(...rows);
+      });
+    });
+  });
+}
+
+function createLoadMoreBtn() {
+  const primaryBtn = `<button type='button' class="btn-primary" 
+  data-action="load-more">Load more...</button>`;
+  refs.wrapper.insertAdjacentHTML("afterend", primaryBtn);
+}
+createLoadMoreBtn();
+
+const loadMoreBtn = document.querySelector('[data-action="load-more"]');
+loadMoreBtn.addEventListener("click", () => {
+  fetchCountries(limit, page).then((data) => {
+    countries = data;
+    page += 1;
+    console.log(countries);
+    const tableBody = document.querySelector(".tbody");
+    const rows = createTableRows(columns, countries);
+    tableBody.append(...rows);
   });
 });

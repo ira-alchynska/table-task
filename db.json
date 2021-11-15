@@ -1,0 +1,2681 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "USA",
+      "iso3": "",
+      "iso2": "AF",
+      "numeric_code": "004",
+      "phone_code": "",
+      "capital": "",
+      "currency": "",
+      "currency_symbol": "؋",
+      "tld": ".af",
+      "native": "افغانستان",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "timezones": [
+        {
+          "zoneName": "Asia/Kabul",
+          "gmtOffset": 16200,
+          "gmtOffsetName": "UTC+04:30",
+          "abbreviation": "AFT",
+          "tzName": "Afghanistan Time"
+        }
+      ],
+      "translations": {
+        "kr": "아프가니스탄",
+        "br": "Afeganistão",
+        "pt": "Afeganistão",
+        "nl": "Afghanistan",
+        "hr": "Afganistan",
+        "fa": "افغانستان",
+        "de": "Afghanistan",
+        "es": "Afganistán",
+        "fr": "Afghanistan",
+        "ja": "アフガニスタン",
+        "it": "Afghanistan",
+        "cn": "阿富汗"
+      },
+      "latitude": "33.00000000",
+      "longitude": "65.00000000",
+      "emoji": "🇦🇫",
+      "emojiU": "U+1F1E6 U+1F1EB"
+    },
+    {
+      "id": 2,
+      "name": "Aland Islands1",
+      "iso3": "ALA",
+      "iso2": "AX",
+      "numeric_code": "248",
+      "phone_code": "+358-18",
+      "capital": "Mariehamn",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "tld": ".ax",
+      "native": "Åland",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "timezones": [
+        {
+          "zoneName": "Europe/Mariehamn",
+          "gmtOffset": 7200,
+          "gmtOffsetName": "UTC+02:00",
+          "abbreviation": "EET",
+          "tzName": "Eastern European Time"
+        }
+      ],
+      "translations": {
+        "kr": "올란드 제도",
+        "br": "Ilhas de Aland",
+        "pt": "Ilhas de Aland",
+        "nl": "Ålandeilanden",
+        "hr": "Ålandski otoci",
+        "fa": "جزایر الند",
+        "de": "Åland",
+        "es": "Alandia",
+        "fr": "Åland",
+        "ja": "オーランド諸島",
+        "it": "Isole Aland",
+        "cn": "奥兰群岛"
+      },
+      "latitude": "60.11666700",
+      "longitude": "19.90000000",
+      "emoji": "🇦🇽",
+      "emojiU": "U+1F1E6 U+1F1FD"
+    },
+    {
+      "id": 3,
+      "name": "Albania1",
+      "iso3": "ALB",
+      "iso2": "AL",
+      "numeric_code": "008",
+      "phone_code": "355",
+      "capital": "Tirana",
+      "currency": "ALL",
+      "currency_symbol": "Lek",
+      "tld": ".al",
+      "native": "Shqipëria",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "timezones": [
+        {
+          "zoneName": "Europe/Tirane",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "CET",
+          "tzName": "Central European Time"
+        }
+      ],
+      "translations": {
+        "kr": "알바니아",
+        "br": "Albânia",
+        "pt": "Albânia",
+        "nl": "Albanië",
+        "hr": "Albanija",
+        "fa": "آلبانی",
+        "de": "Albanien",
+        "es": "Albania",
+        "fr": "Albanie",
+        "ja": "アルバニア",
+        "it": "Albania",
+        "cn": "阿尔巴尼亚"
+      },
+      "latitude": "41.00000000",
+      "longitude": "20.00000000",
+      "emoji": "🇦🇱",
+      "emojiU": "U+1F1E6 U+1F1F1"
+    },
+    {
+      "id": 4,
+      "name": "Algeria",
+      "iso3": "DZA",
+      "iso2": "DZ",
+      "numeric_code": "012",
+      "phone_code": "213",
+      "capital": "Algiers",
+      "currency": "DZD",
+      "currency_symbol": "دج",
+      "tld": ".dz",
+      "native": "الجزائر",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Algiers",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "CET",
+          "tzName": "Central European Time"
+        }
+      ],
+      "translations": {
+        "kr": "알제리",
+        "br": "Argélia",
+        "pt": "Argélia",
+        "nl": "Algerije",
+        "hr": "Alžir",
+        "fa": "الجزایر",
+        "de": "Algerien",
+        "es": "Argelia",
+        "fr": "Algérie",
+        "ja": "アルジェリア",
+        "it": "Algeria",
+        "cn": "阿尔及利亚"
+      },
+      "latitude": "28.00000000",
+      "longitude": "3.00000000",
+      "emoji": "🇩🇿",
+      "emojiU": "U+1F1E9 U+1F1FF"
+    },
+    {
+      "id": 5,
+      "name": "American Samoa",
+      "iso3": "ASM",
+      "iso2": "AS",
+      "numeric_code": "016",
+      "phone_code": "+1-684",
+      "capital": "Pago Pago",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "tld": ".as",
+      "native": "American Samoa",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "timezones": [
+        {
+          "zoneName": "Pacific/Pago_Pago",
+          "gmtOffset": -39600,
+          "gmtOffsetName": "UTC-11:00",
+          "abbreviation": "SST",
+          "tzName": "Samoa Standard Time"
+        }
+      ],
+      "translations": {
+        "kr": "아메리칸사모아",
+        "br": "Samoa Americana",
+        "pt": "Samoa Americana",
+        "nl": "Amerikaans Samoa",
+        "hr": "Američka Samoa",
+        "fa": "ساموآی آمریکا",
+        "de": "Amerikanisch-Samoa",
+        "es": "Samoa Americana",
+        "fr": "Samoa américaines",
+        "ja": "アメリカ領サモア",
+        "it": "Samoa Americane",
+        "cn": "美属萨摩亚"
+      },
+      "latitude": "-14.33333333",
+      "longitude": "-170.00000000",
+      "emoji": "🇦🇸",
+      "emojiU": "U+1F1E6 U+1F1F8"
+    },
+    {
+      "id": 6,
+      "name": "Andorra",
+      "iso3": "AND",
+      "iso2": "AD",
+      "numeric_code": "020",
+      "phone_code": "376",
+      "capital": "Andorra la Vella",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "tld": ".ad",
+      "native": "Andorra",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "timezones": [
+        {
+          "zoneName": "Europe/Andorra",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "CET",
+          "tzName": "Central European Time"
+        }
+      ],
+      "translations": {
+        "kr": "안도라",
+        "br": "Andorra",
+        "pt": "Andorra",
+        "nl": "Andorra",
+        "hr": "Andora",
+        "fa": "آندورا",
+        "de": "Andorra",
+        "es": "Andorra",
+        "fr": "Andorre",
+        "ja": "アンドラ",
+        "it": "Andorra",
+        "cn": "安道尔"
+      },
+      "latitude": "42.50000000",
+      "longitude": "1.50000000",
+      "emoji": "🇦🇩",
+      "emojiU": "U+1F1E6 U+1F1E9"
+    },
+    {
+      "id": 7,
+      "name": "Angola",
+      "iso3": "AGO",
+      "iso2": "AO",
+      "numeric_code": "024",
+      "phone_code": "244",
+      "capital": "Luanda",
+      "currency": "AOA",
+      "currency_symbol": "Kz",
+      "tld": ".ao",
+      "native": "Angola",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Luanda",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "WAT",
+          "tzName": "West Africa Time"
+        }
+      ],
+      "translations": {
+        "kr": "앙골라",
+        "br": "Angola",
+        "pt": "Angola",
+        "nl": "Angola",
+        "hr": "Angola",
+        "fa": "آنگولا",
+        "de": "Angola",
+        "es": "Angola",
+        "fr": "Angola",
+        "ja": "アンゴラ",
+        "it": "Angola",
+        "cn": "安哥拉"
+      },
+      "latitude": "-12.50000000",
+      "longitude": "18.50000000",
+      "emoji": "🇦🇴",
+      "emojiU": "U+1F1E6 U+1F1F4"
+    },
+    {
+      "id": 8,
+      "name": "Anguilla",
+      "iso3": "AIA",
+      "iso2": "AI",
+      "numeric_code": "660",
+      "phone_code": "+1-264",
+      "capital": "The Valley",
+      "currency": "XCD",
+      "currency_symbol": "$",
+      "tld": ".ai",
+      "native": "Anguilla",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "timezones": [
+        {
+          "zoneName": "America/Anguilla",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        }
+      ],
+      "translations": {
+        "kr": "앵귈라",
+        "br": "Anguila",
+        "pt": "Anguila",
+        "nl": "Anguilla",
+        "hr": "Angvila",
+        "fa": "آنگویلا",
+        "de": "Anguilla",
+        "es": "Anguilla",
+        "fr": "Anguilla",
+        "ja": "アンギラ",
+        "it": "Anguilla",
+        "cn": "安圭拉"
+      },
+      "latitude": "18.25000000",
+      "longitude": "-63.16666666",
+      "emoji": "🇦🇮",
+      "emojiU": "U+1F1E6 U+1F1EE"
+    },
+    {
+      "id": 9,
+      "name": "Antarctica",
+      "iso3": "ATA",
+      "iso2": "AQ",
+      "numeric_code": "010",
+      "phone_code": "672",
+      "capital": "",
+      "currency": "AAD",
+      "currency_symbol": "$",
+      "tld": ".aq",
+      "native": "Antarctica",
+      "region": "Polar",
+      "subregion": "",
+      "timezones": [
+        {
+          "zoneName": "Antarctica/Casey",
+          "gmtOffset": 39600,
+          "gmtOffsetName": "UTC+11:00",
+          "abbreviation": "AWST",
+          "tzName": "Australian Western Standard Time"
+        },
+        {
+          "zoneName": "Antarctica/Davis",
+          "gmtOffset": 25200,
+          "gmtOffsetName": "UTC+07:00",
+          "abbreviation": "DAVT",
+          "tzName": "Davis Time"
+        },
+        {
+          "zoneName": "Antarctica/DumontDUrville",
+          "gmtOffset": 36000,
+          "gmtOffsetName": "UTC+10:00",
+          "abbreviation": "DDUT",
+          "tzName": "Dumont d'Urville Time"
+        },
+        {
+          "zoneName": "Antarctica/Mawson",
+          "gmtOffset": 18000,
+          "gmtOffsetName": "UTC+05:00",
+          "abbreviation": "MAWT",
+          "tzName": "Mawson Station Time"
+        },
+        {
+          "zoneName": "Antarctica/McMurdo",
+          "gmtOffset": 46800,
+          "gmtOffsetName": "UTC+13:00",
+          "abbreviation": "NZDT",
+          "tzName": "New Zealand Daylight Time"
+        },
+        {
+          "zoneName": "Antarctica/Palmer",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "CLST",
+          "tzName": "Chile Summer Time"
+        },
+        {
+          "zoneName": "Antarctica/Rothera",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ROTT",
+          "tzName": "Rothera Research Station Time"
+        },
+        {
+          "zoneName": "Antarctica/Syowa",
+          "gmtOffset": 10800,
+          "gmtOffsetName": "UTC+03:00",
+          "abbreviation": "SYOT",
+          "tzName": "Showa Station Time"
+        },
+        {
+          "zoneName": "Antarctica/Troll",
+          "gmtOffset": 0,
+          "gmtOffsetName": "UTC±00",
+          "abbreviation": "GMT",
+          "tzName": "Greenwich Mean Time"
+        },
+        {
+          "zoneName": "Antarctica/Vostok",
+          "gmtOffset": 21600,
+          "gmtOffsetName": "UTC+06:00",
+          "abbreviation": "VOST",
+          "tzName": "Vostok Station Time"
+        }
+      ],
+      "translations": {
+        "kr": "남극",
+        "br": "Antártida",
+        "pt": "Antárctida",
+        "nl": "Antarctica",
+        "hr": "Antarktika",
+        "fa": "جنوبگان",
+        "de": "Antarktika",
+        "es": "Antártida",
+        "fr": "Antarctique",
+        "ja": "南極大陸",
+        "it": "Antartide",
+        "cn": "南极洲"
+      },
+      "latitude": "-74.65000000",
+      "longitude": "4.48000000",
+      "emoji": "🇦🇶",
+      "emojiU": "U+1F1E6 U+1F1F6"
+    },
+    {
+      "id": 11,
+      "name": "Argentina",
+      "iso3": "ARG",
+      "iso2": "AR",
+      "numeric_code": "032",
+      "phone_code": "54",
+      "capital": "Buenos Aires",
+      "currency": "ARS",
+      "currency_symbol": "$",
+      "tld": ".ar",
+      "native": "Argentina",
+      "region": "Americas",
+      "subregion": "South America",
+      "timezones": [
+        {
+          "zoneName": "America/Argentina/Buenos_Aires",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/Catamarca",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/Cordoba",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/Jujuy",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/La_Rioja",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/Mendoza",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/Rio_Gallegos",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/Salta",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/San_Juan",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/San_Luis",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/Tucuman",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        },
+        {
+          "zoneName": "America/Argentina/Ushuaia",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "ART",
+          "tzName": "Argentina Time"
+        }
+      ],
+      "translations": {
+        "kr": "아르헨티나",
+        "br": "Argentina",
+        "pt": "Argentina",
+        "nl": "Argentinië",
+        "hr": "Argentina",
+        "fa": "آرژانتین",
+        "de": "Argentinien",
+        "es": "Argentina",
+        "fr": "Argentine",
+        "ja": "アルゼンチン",
+        "it": "Argentina",
+        "cn": "阿根廷"
+      },
+      "latitude": "-34.00000000",
+      "longitude": "-64.00000000",
+      "emoji": "🇦🇷",
+      "emojiU": "U+1F1E6 U+1F1F7"
+    },
+    {
+      "id": 12,
+      "name": "Armenia",
+      "iso3": "ARM",
+      "iso2": "AM",
+      "numeric_code": "051",
+      "phone_code": "374",
+      "capital": "Yerevan",
+      "currency": "AMD",
+      "currency_symbol": "֏",
+      "tld": ".am",
+      "native": "Հայաստան",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "timezones": [
+        {
+          "zoneName": "Asia/Yerevan",
+          "gmtOffset": 14400,
+          "gmtOffsetName": "UTC+04:00",
+          "abbreviation": "AMT",
+          "tzName": "Armenia Time"
+        }
+      ],
+      "translations": {
+        "kr": "아르메니아",
+        "br": "Armênia",
+        "pt": "Arménia",
+        "nl": "Armenië",
+        "hr": "Armenija",
+        "fa": "ارمنستان",
+        "de": "Armenien",
+        "es": "Armenia",
+        "fr": "Arménie",
+        "ja": "アルメニア",
+        "it": "Armenia",
+        "cn": "亚美尼亚"
+      },
+      "latitude": "40.00000000",
+      "longitude": "45.00000000",
+      "emoji": "🇦🇲",
+      "emojiU": "U+1F1E6 U+1F1F2"
+    },
+    {
+      "id": 13,
+      "name": "Aruba",
+      "iso3": "ABW",
+      "iso2": "AW",
+      "numeric_code": "533",
+      "phone_code": "297",
+      "capital": "Oranjestad",
+      "currency": "AWG",
+      "currency_symbol": "ƒ",
+      "tld": ".aw",
+      "native": "Aruba",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "timezones": [
+        {
+          "zoneName": "America/Aruba",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        }
+      ],
+      "translations": {
+        "kr": "아루바",
+        "br": "Aruba",
+        "pt": "Aruba",
+        "nl": "Aruba",
+        "hr": "Aruba",
+        "fa": "آروبا",
+        "de": "Aruba",
+        "es": "Aruba",
+        "fr": "Aruba",
+        "ja": "アルバ",
+        "it": "Aruba",
+        "cn": "阿鲁巴"
+      },
+      "latitude": "12.50000000",
+      "longitude": "-69.96666666",
+      "emoji": "🇦🇼",
+      "emojiU": "U+1F1E6 U+1F1FC"
+    },
+    {
+      "id": 14,
+      "name": "Australia",
+      "iso3": "AUS",
+      "iso2": "AU",
+      "numeric_code": "036",
+      "phone_code": "61",
+      "capital": "Canberra",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "tld": ".au",
+      "native": "Australia",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "timezones": [
+        {
+          "zoneName": "Antarctica/Macquarie",
+          "gmtOffset": 39600,
+          "gmtOffsetName": "UTC+11:00",
+          "abbreviation": "MIST",
+          "tzName": "Macquarie Island Station Time"
+        },
+        {
+          "zoneName": "Australia/Adelaide",
+          "gmtOffset": 37800,
+          "gmtOffsetName": "UTC+10:30",
+          "abbreviation": "ACDT",
+          "tzName": "Australian Central Daylight Saving Time"
+        },
+        {
+          "zoneName": "Australia/Brisbane",
+          "gmtOffset": 36000,
+          "gmtOffsetName": "UTC+10:00",
+          "abbreviation": "AEST",
+          "tzName": "Australian Eastern Standard Time"
+        },
+        {
+          "zoneName": "Australia/Broken_Hill",
+          "gmtOffset": 37800,
+          "gmtOffsetName": "UTC+10:30",
+          "abbreviation": "ACDT",
+          "tzName": "Australian Central Daylight Saving Time"
+        },
+        {
+          "zoneName": "Australia/Currie",
+          "gmtOffset": 39600,
+          "gmtOffsetName": "UTC+11:00",
+          "abbreviation": "AEDT",
+          "tzName": "Australian Eastern Daylight Saving Time"
+        },
+        {
+          "zoneName": "Australia/Darwin",
+          "gmtOffset": 34200,
+          "gmtOffsetName": "UTC+09:30",
+          "abbreviation": "ACST",
+          "tzName": "Australian Central Standard Time"
+        },
+        {
+          "zoneName": "Australia/Eucla",
+          "gmtOffset": 31500,
+          "gmtOffsetName": "UTC+08:45",
+          "abbreviation": "ACWST",
+          "tzName": "Australian Central Western Standard Time (Unofficial)"
+        },
+        {
+          "zoneName": "Australia/Hobart",
+          "gmtOffset": 39600,
+          "gmtOffsetName": "UTC+11:00",
+          "abbreviation": "AEDT",
+          "tzName": "Australian Eastern Daylight Saving Time"
+        },
+        {
+          "zoneName": "Australia/Lindeman",
+          "gmtOffset": 36000,
+          "gmtOffsetName": "UTC+10:00",
+          "abbreviation": "AEST",
+          "tzName": "Australian Eastern Standard Time"
+        },
+        {
+          "zoneName": "Australia/Lord_Howe",
+          "gmtOffset": 39600,
+          "gmtOffsetName": "UTC+11:00",
+          "abbreviation": "LHST",
+          "tzName": "Lord Howe Summer Time"
+        },
+        {
+          "zoneName": "Australia/Melbourne",
+          "gmtOffset": 39600,
+          "gmtOffsetName": "UTC+11:00",
+          "abbreviation": "AEDT",
+          "tzName": "Australian Eastern Daylight Saving Time"
+        },
+        {
+          "zoneName": "Australia/Perth",
+          "gmtOffset": 28800,
+          "gmtOffsetName": "UTC+08:00",
+          "abbreviation": "AWST",
+          "tzName": "Australian Western Standard Time"
+        },
+        {
+          "zoneName": "Australia/Sydney",
+          "gmtOffset": 39600,
+          "gmtOffsetName": "UTC+11:00",
+          "abbreviation": "AEDT",
+          "tzName": "Australian Eastern Daylight Saving Time"
+        }
+      ],
+      "translations": {
+        "kr": "호주",
+        "br": "Austrália",
+        "pt": "Austrália",
+        "nl": "Australië",
+        "hr": "Australija",
+        "fa": "استرالیا",
+        "de": "Australien",
+        "es": "Australia",
+        "fr": "Australie",
+        "ja": "オーストラリア",
+        "it": "Australia",
+        "cn": "澳大利亚"
+      },
+      "latitude": "-27.00000000",
+      "longitude": "133.00000000",
+      "emoji": "🇦🇺",
+      "emojiU": "U+1F1E6 U+1F1FA"
+    },
+    {
+      "id": 15,
+      "name": "Austria",
+      "iso3": "AUT",
+      "iso2": "AT",
+      "numeric_code": "040",
+      "phone_code": "43",
+      "capital": "Vienna",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "tld": ".at",
+      "native": "Österreich",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "timezones": [
+        {
+          "zoneName": "Europe/Vienna",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "CET",
+          "tzName": "Central European Time"
+        }
+      ],
+      "translations": {
+        "kr": "오스트리아",
+        "br": "áustria",
+        "pt": "áustria",
+        "nl": "Oostenrijk",
+        "hr": "Austrija",
+        "fa": "اتریش",
+        "de": "Österreich",
+        "es": "Austria",
+        "fr": "Autriche",
+        "ja": "オーストリア",
+        "it": "Austria",
+        "cn": "奥地利"
+      },
+      "latitude": "47.33333333",
+      "longitude": "13.33333333",
+      "emoji": "🇦🇹",
+      "emojiU": "U+1F1E6 U+1F1F9"
+    },
+    {
+      "id": 16,
+      "name": "Azerbaijan",
+      "iso3": "AZE",
+      "iso2": "AZ",
+      "numeric_code": "031",
+      "phone_code": "994",
+      "capital": "Baku",
+      "currency": "AZN",
+      "currency_symbol": "m",
+      "tld": ".az",
+      "native": "Azərbaycan",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "timezones": [
+        {
+          "zoneName": "Asia/Baku",
+          "gmtOffset": 14400,
+          "gmtOffsetName": "UTC+04:00",
+          "abbreviation": "AZT",
+          "tzName": "Azerbaijan Time"
+        }
+      ],
+      "translations": {
+        "kr": "아제르바이잔",
+        "br": "Azerbaijão",
+        "pt": "Azerbaijão",
+        "nl": "Azerbeidzjan",
+        "hr": "Azerbajdžan",
+        "fa": "آذربایجان",
+        "de": "Aserbaidschan",
+        "es": "Azerbaiyán",
+        "fr": "Azerbaïdjan",
+        "ja": "アゼルバイジャン",
+        "it": "Azerbaijan",
+        "cn": "阿塞拜疆"
+      },
+      "latitude": "40.50000000",
+      "longitude": "47.50000000",
+      "emoji": "🇦🇿",
+      "emojiU": "U+1F1E6 U+1F1FF"
+    },
+    {
+      "id": 17,
+      "name": "Bahamas The",
+      "iso3": "BHS",
+      "iso2": "BS",
+      "numeric_code": "044",
+      "phone_code": "+1-242",
+      "capital": "Nassau",
+      "currency": "BSD",
+      "currency_symbol": "B$",
+      "tld": ".bs",
+      "native": "Bahamas",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "timezones": [
+        {
+          "zoneName": "America/Nassau",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "EST",
+          "tzName": "Eastern Standard Time (North America)"
+        }
+      ],
+      "translations": {
+        "kr": "바하마",
+        "br": "Bahamas",
+        "pt": "Baamas",
+        "nl": "Bahama’s",
+        "hr": "Bahami",
+        "fa": "باهاما",
+        "de": "Bahamas",
+        "es": "Bahamas",
+        "fr": "Bahamas",
+        "ja": "バハマ",
+        "it": "Bahamas",
+        "cn": "巴哈马"
+      },
+      "latitude": "24.25000000",
+      "longitude": "-76.00000000",
+      "emoji": "🇧🇸",
+      "emojiU": "U+1F1E7 U+1F1F8"
+    },
+    {
+      "id": 18,
+      "name": "Bahrain",
+      "iso3": "BHR",
+      "iso2": "BH",
+      "numeric_code": "048",
+      "phone_code": "973",
+      "capital": "Manama",
+      "currency": "BHD",
+      "currency_symbol": ".د.ب",
+      "tld": ".bh",
+      "native": "‏البحرين",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "timezones": [
+        {
+          "zoneName": "Asia/Bahrain",
+          "gmtOffset": 10800,
+          "gmtOffsetName": "UTC+03:00",
+          "abbreviation": "AST",
+          "tzName": "Arabia Standard Time"
+        }
+      ],
+      "translations": {
+        "kr": "바레인",
+        "br": "Bahrein",
+        "pt": "Barém",
+        "nl": "Bahrein",
+        "hr": "Bahrein",
+        "fa": "بحرین",
+        "de": "Bahrain",
+        "es": "Bahrein",
+        "fr": "Bahreïn",
+        "ja": "バーレーン",
+        "it": "Bahrein",
+        "cn": "巴林"
+      },
+      "latitude": "26.00000000",
+      "longitude": "50.55000000",
+      "emoji": "🇧🇭",
+      "emojiU": "U+1F1E7 U+1F1ED"
+    },
+    {
+      "id": 19,
+      "name": "Bangladesh",
+      "iso3": "BGD",
+      "iso2": "BD",
+      "numeric_code": "050",
+      "phone_code": "880",
+      "capital": "Dhaka",
+      "currency": "BDT",
+      "currency_symbol": "৳",
+      "tld": ".bd",
+      "native": "Bangladesh",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "timezones": [
+        {
+          "zoneName": "Asia/Dhaka",
+          "gmtOffset": 21600,
+          "gmtOffsetName": "UTC+06:00",
+          "abbreviation": "BDT",
+          "tzName": "Bangladesh Standard Time"
+        }
+      ],
+      "translations": {
+        "kr": "방글라데시",
+        "br": "Bangladesh",
+        "pt": "Bangladeche",
+        "nl": "Bangladesh",
+        "hr": "Bangladeš",
+        "fa": "بنگلادش",
+        "de": "Bangladesch",
+        "es": "Bangladesh",
+        "fr": "Bangladesh",
+        "ja": "バングラデシュ",
+        "it": "Bangladesh",
+        "cn": "孟加拉"
+      },
+      "latitude": "24.00000000",
+      "longitude": "90.00000000",
+      "emoji": "🇧🇩",
+      "emojiU": "U+1F1E7 U+1F1E9"
+    },
+    {
+      "id": 20,
+      "name": "Barbados",
+      "iso3": "BRB",
+      "iso2": "BB",
+      "numeric_code": "052",
+      "phone_code": "+1-246",
+      "capital": "Bridgetown",
+      "currency": "BBD",
+      "currency_symbol": "Bds$",
+      "tld": ".bb",
+      "native": "Barbados",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "timezones": [
+        {
+          "zoneName": "America/Barbados",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        }
+      ],
+      "translations": {
+        "kr": "바베이도스",
+        "br": "Barbados",
+        "pt": "Barbados",
+        "nl": "Barbados",
+        "hr": "Barbados",
+        "fa": "باربادوس",
+        "de": "Barbados",
+        "es": "Barbados",
+        "fr": "Barbade",
+        "ja": "バルバドス",
+        "it": "Barbados",
+        "cn": "巴巴多斯"
+      },
+      "latitude": "13.16666666",
+      "longitude": "-59.53333333",
+      "emoji": "🇧🇧",
+      "emojiU": "U+1F1E7 U+1F1E7"
+    },
+    {
+      "id": 21,
+      "name": "Belarus",
+      "iso3": "BLR",
+      "iso2": "BY",
+      "numeric_code": "112",
+      "phone_code": "375",
+      "capital": "Minsk",
+      "currency": "BYN",
+      "currency_symbol": "Br",
+      "tld": ".by",
+      "native": "Белару́сь",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "timezones": [
+        {
+          "zoneName": "Europe/Minsk",
+          "gmtOffset": 10800,
+          "gmtOffsetName": "UTC+03:00",
+          "abbreviation": "MSK",
+          "tzName": "Moscow Time"
+        }
+      ],
+      "translations": {
+        "kr": "벨라루스",
+        "br": "Bielorrússia",
+        "pt": "Bielorrússia",
+        "nl": "Wit-Rusland",
+        "hr": "Bjelorusija",
+        "fa": "بلاروس",
+        "de": "Weißrussland",
+        "es": "Bielorrusia",
+        "fr": "Biélorussie",
+        "ja": "ベラルーシ",
+        "it": "Bielorussia",
+        "cn": "白俄罗斯"
+      },
+      "latitude": "53.00000000",
+      "longitude": "28.00000000",
+      "emoji": "🇧🇾",
+      "emojiU": "U+1F1E7 U+1F1FE"
+    },
+    {
+      "id": 22,
+      "name": "Belgium",
+      "iso3": "BEL",
+      "iso2": "BE",
+      "numeric_code": "056",
+      "phone_code": "32",
+      "capital": "Brussels",
+      "currency": "EUR",
+      "currency_symbol": "€",
+      "tld": ".be",
+      "native": "België",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "timezones": [
+        {
+          "zoneName": "Europe/Brussels",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "CET",
+          "tzName": "Central European Time"
+        }
+      ],
+      "translations": {
+        "kr": "벨기에",
+        "br": "Bélgica",
+        "pt": "Bélgica",
+        "nl": "België",
+        "hr": "Belgija",
+        "fa": "بلژیک",
+        "de": "Belgien",
+        "es": "Bélgica",
+        "fr": "Belgique",
+        "ja": "ベルギー",
+        "it": "Belgio",
+        "cn": "比利时"
+      },
+      "latitude": "50.83333333",
+      "longitude": "4.00000000",
+      "emoji": "🇧🇪",
+      "emojiU": "U+1F1E7 U+1F1EA"
+    },
+    {
+      "id": 23,
+      "name": "Belize",
+      "iso3": "BLZ",
+      "iso2": "BZ",
+      "numeric_code": "084",
+      "phone_code": "501",
+      "capital": "Belmopan",
+      "currency": "BZD",
+      "currency_symbol": "$",
+      "tld": ".bz",
+      "native": "Belize",
+      "region": "Americas",
+      "subregion": "Central America",
+      "timezones": [
+        {
+          "zoneName": "America/Belize",
+          "gmtOffset": -21600,
+          "gmtOffsetName": "UTC-06:00",
+          "abbreviation": "CST",
+          "tzName": "Central Standard Time (North America)"
+        }
+      ],
+      "translations": {
+        "kr": "벨리즈",
+        "br": "Belize",
+        "pt": "Belize",
+        "nl": "Belize",
+        "hr": "Belize",
+        "fa": "بلیز",
+        "de": "Belize",
+        "es": "Belice",
+        "fr": "Belize",
+        "ja": "ベリーズ",
+        "it": "Belize",
+        "cn": "伯利兹"
+      },
+      "latitude": "17.25000000",
+      "longitude": "-88.75000000",
+      "emoji": "🇧🇿",
+      "emojiU": "U+1F1E7 U+1F1FF"
+    },
+    {
+      "id": 24,
+      "name": "Benin",
+      "iso3": "BEN",
+      "iso2": "BJ",
+      "numeric_code": "204",
+      "phone_code": "229",
+      "capital": "Porto-Novo",
+      "currency": "XOF",
+      "currency_symbol": "CFA",
+      "tld": ".bj",
+      "native": "Bénin",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Porto-Novo",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "WAT",
+          "tzName": "West Africa Time"
+        }
+      ],
+      "translations": {
+        "kr": "베냉",
+        "br": "Benin",
+        "pt": "Benim",
+        "nl": "Benin",
+        "hr": "Benin",
+        "fa": "بنین",
+        "de": "Benin",
+        "es": "Benín",
+        "fr": "Bénin",
+        "ja": "ベナン",
+        "it": "Benin",
+        "cn": "贝宁"
+      },
+      "latitude": "9.50000000",
+      "longitude": "2.25000000",
+      "emoji": "🇧🇯",
+      "emojiU": "U+1F1E7 U+1F1EF"
+    },
+    {
+      "id": 25,
+      "name": "Bermuda",
+      "iso3": "BMU",
+      "iso2": "BM",
+      "numeric_code": "060",
+      "phone_code": "+1-441",
+      "capital": "Hamilton",
+      "currency": "BMD",
+      "currency_symbol": "$",
+      "tld": ".bm",
+      "native": "Bermuda",
+      "region": "Americas",
+      "subregion": "Northern America",
+      "timezones": [
+        {
+          "zoneName": "Atlantic/Bermuda",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        }
+      ],
+      "translations": {
+        "kr": "버뮤다",
+        "br": "Bermudas",
+        "pt": "Bermudas",
+        "nl": "Bermuda",
+        "hr": "Bermudi",
+        "fa": "برمودا",
+        "de": "Bermuda",
+        "es": "Bermudas",
+        "fr": "Bermudes",
+        "ja": "バミューダ",
+        "it": "Bermuda",
+        "cn": "百慕大"
+      },
+      "latitude": "32.33333333",
+      "longitude": "-64.75000000",
+      "emoji": "🇧🇲",
+      "emojiU": "U+1F1E7 U+1F1F2"
+    },
+    {
+      "id": 26,
+      "name": "Bhutan",
+      "iso3": "BTN",
+      "iso2": "BT",
+      "numeric_code": "064",
+      "phone_code": "975",
+      "capital": "Thimphu",
+      "currency": "BTN",
+      "currency_symbol": "Nu.",
+      "tld": ".bt",
+      "native": "ʼbrug-yul",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "timezones": [
+        {
+          "zoneName": "Asia/Thimphu",
+          "gmtOffset": 21600,
+          "gmtOffsetName": "UTC+06:00",
+          "abbreviation": "BTT",
+          "tzName": "Bhutan Time"
+        }
+      ],
+      "translations": {
+        "kr": "부탄",
+        "br": "Butão",
+        "pt": "Butão",
+        "nl": "Bhutan",
+        "hr": "Butan",
+        "fa": "بوتان",
+        "de": "Bhutan",
+        "es": "Bután",
+        "fr": "Bhoutan",
+        "ja": "ブータン",
+        "it": "Bhutan",
+        "cn": "不丹"
+      },
+      "latitude": "27.50000000",
+      "longitude": "90.50000000",
+      "emoji": "🇧🇹",
+      "emojiU": "U+1F1E7 U+1F1F9"
+    },
+    {
+      "id": 27,
+      "name": "Bolivia",
+      "iso3": "BOL",
+      "iso2": "BO",
+      "numeric_code": "068",
+      "phone_code": "591",
+      "capital": "Sucre",
+      "currency": "BOB",
+      "currency_symbol": "Bs.",
+      "tld": ".bo",
+      "native": "Bolivia",
+      "region": "Americas",
+      "subregion": "South America",
+      "timezones": [
+        {
+          "zoneName": "America/La_Paz",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "BOT",
+          "tzName": "Bolivia Time"
+        }
+      ],
+      "translations": {
+        "kr": "볼리비아",
+        "br": "Bolívia",
+        "pt": "Bolívia",
+        "nl": "Bolivia",
+        "hr": "Bolivija",
+        "fa": "بولیوی",
+        "de": "Bolivien",
+        "es": "Bolivia",
+        "fr": "Bolivie",
+        "ja": "ボリビア多民族国",
+        "it": "Bolivia",
+        "cn": "玻利维亚"
+      },
+      "latitude": "-17.00000000",
+      "longitude": "-65.00000000",
+      "emoji": "🇧🇴",
+      "emojiU": "U+1F1E7 U+1F1F4"
+    },
+    {
+      "id": 155,
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "iso3": "BES",
+      "iso2": "BQ",
+      "numeric_code": "535",
+      "phone_code": "599",
+      "capital": "Kralendijk",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "tld": ".an",
+      "native": "Caribisch Nederland",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "timezones": [
+        {
+          "zoneName": "America/Anguilla",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        }
+      ],
+      "translations": {
+        "kr": "보네르 섬",
+        "br": "Bonaire",
+        "pt": "Bonaire",
+        "fa": "بونیر",
+        "de": "Bonaire, Sint Eustatius und Saba",
+        "fr": "Bonaire, Saint-Eustache et Saba",
+        "it": "Bonaire, Saint-Eustache e Saba",
+        "cn": "博内尔岛、圣尤斯特歇斯和萨巴岛"
+      },
+      "latitude": "12.15000000",
+      "longitude": "-68.26666700",
+      "emoji": "🇧🇶",
+      "emojiU": "U+1F1E7 U+1F1F6"
+    },
+    {
+      "id": 28,
+      "name": "Bosnia and Herzegovina",
+      "iso3": "BIH",
+      "iso2": "BA",
+      "numeric_code": "070",
+      "phone_code": "387",
+      "capital": "Sarajevo",
+      "currency": "BAM",
+      "currency_symbol": "KM",
+      "tld": ".ba",
+      "native": "Bosna i Hercegovina",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "timezones": [
+        {
+          "zoneName": "Europe/Sarajevo",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "CET",
+          "tzName": "Central European Time"
+        }
+      ],
+      "translations": {
+        "kr": "보스니아 헤르체고비나",
+        "br": "Bósnia e Herzegovina",
+        "pt": "Bósnia e Herzegovina",
+        "nl": "Bosnië en Herzegovina",
+        "hr": "Bosna i Hercegovina",
+        "fa": "بوسنی و هرزگوین",
+        "de": "Bosnien und Herzegowina",
+        "es": "Bosnia y Herzegovina",
+        "fr": "Bosnie-Herzégovine",
+        "ja": "ボスニア・ヘルツェゴビナ",
+        "it": "Bosnia ed Erzegovina",
+        "cn": "波斯尼亚和黑塞哥维那"
+      },
+      "latitude": "44.00000000",
+      "longitude": "18.00000000",
+      "emoji": "🇧🇦",
+      "emojiU": "U+1F1E7 U+1F1E6"
+    },
+    {
+      "id": 29,
+      "name": "Botswana",
+      "iso3": "BWA",
+      "iso2": "BW",
+      "numeric_code": "072",
+      "phone_code": "267",
+      "capital": "Gaborone",
+      "currency": "BWP",
+      "currency_symbol": "P",
+      "tld": ".bw",
+      "native": "Botswana",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Gaborone",
+          "gmtOffset": 7200,
+          "gmtOffsetName": "UTC+02:00",
+          "abbreviation": "CAT",
+          "tzName": "Central Africa Time"
+        }
+      ],
+      "translations": {
+        "kr": "보츠와나",
+        "br": "Botsuana",
+        "pt": "Botsuana",
+        "nl": "Botswana",
+        "hr": "Bocvana",
+        "fa": "بوتسوانا",
+        "de": "Botswana",
+        "es": "Botswana",
+        "fr": "Botswana",
+        "ja": "ボツワナ",
+        "it": "Botswana",
+        "cn": "博茨瓦纳"
+      },
+      "latitude": "-22.00000000",
+      "longitude": "24.00000000",
+      "emoji": "🇧🇼",
+      "emojiU": "U+1F1E7 U+1F1FC"
+    },
+    {
+      "id": 30,
+      "name": "Bouvet Island",
+      "iso3": "BVT",
+      "iso2": "BV",
+      "numeric_code": "074",
+      "phone_code": "0055",
+      "capital": "",
+      "currency": "NOK",
+      "currency_symbol": "kr",
+      "tld": ".bv",
+      "native": "Bouvetøya",
+      "region": "",
+      "subregion": "",
+      "timezones": [
+        {
+          "zoneName": "Europe/Oslo",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "CET",
+          "tzName": "Central European Time"
+        }
+      ],
+      "translations": {
+        "kr": "부벳 섬",
+        "br": "Ilha Bouvet",
+        "pt": "Ilha Bouvet",
+        "nl": "Bouveteiland",
+        "hr": "Otok Bouvet",
+        "fa": "جزیره بووه",
+        "de": "Bouvetinsel",
+        "es": "Isla Bouvet",
+        "fr": "Île Bouvet",
+        "ja": "ブーベ島",
+        "it": "Isola Bouvet",
+        "cn": "布维岛"
+      },
+      "latitude": "-54.43333333",
+      "longitude": "3.40000000",
+      "emoji": "🇧🇻",
+      "emojiU": "U+1F1E7 U+1F1FB"
+    },
+    {
+      "id": 31,
+      "name": "Brazil",
+      "iso3": "BRA",
+      "iso2": "BR",
+      "numeric_code": "076",
+      "phone_code": "55",
+      "capital": "Brasilia",
+      "currency": "BRL",
+      "currency_symbol": "R$",
+      "tld": ".br",
+      "native": "Brasil",
+      "region": "Americas",
+      "subregion": "South America",
+      "timezones": [
+        {
+          "zoneName": "America/Araguaina",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "BRT",
+          "tzName": "Brasília Time"
+        },
+        {
+          "zoneName": "America/Bahia",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "BRT",
+          "tzName": "Brasília Time"
+        },
+        {
+          "zoneName": "America/Belem",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "BRT",
+          "tzName": "Brasília Time"
+        },
+        {
+          "zoneName": "America/Boa_Vista",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AMT",
+          "tzName": "Amazon Time (Brazil)[3"
+        },
+        {
+          "zoneName": "America/Campo_Grande",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AMT",
+          "tzName": "Amazon Time (Brazil)[3"
+        },
+        {
+          "zoneName": "America/Cuiaba",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "BRT",
+          "tzName": "Brasilia Time"
+        },
+        {
+          "zoneName": "America/Eirunepe",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "ACT",
+          "tzName": "Acre Time"
+        },
+        {
+          "zoneName": "America/Fortaleza",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "BRT",
+          "tzName": "Brasília Time"
+        },
+        {
+          "zoneName": "America/Maceio",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "BRT",
+          "tzName": "Brasília Time"
+        },
+        {
+          "zoneName": "America/Manaus",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AMT",
+          "tzName": "Amazon Time (Brazil)"
+        },
+        {
+          "zoneName": "America/Noronha",
+          "gmtOffset": -7200,
+          "gmtOffsetName": "UTC-02:00",
+          "abbreviation": "FNT",
+          "tzName": "Fernando de Noronha Time"
+        },
+        {
+          "zoneName": "America/Porto_Velho",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AMT",
+          "tzName": "Amazon Time (Brazil)[3"
+        },
+        {
+          "zoneName": "America/Recife",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "BRT",
+          "tzName": "Brasília Time"
+        },
+        {
+          "zoneName": "America/Rio_Branco",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "ACT",
+          "tzName": "Acre Time"
+        },
+        {
+          "zoneName": "America/Santarem",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "BRT",
+          "tzName": "Brasília Time"
+        },
+        {
+          "zoneName": "America/Sao_Paulo",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "BRT",
+          "tzName": "Brasília Time"
+        }
+      ],
+      "translations": {
+        "kr": "브라질",
+        "br": "Brasil",
+        "pt": "Brasil",
+        "nl": "Brazilië",
+        "hr": "Brazil",
+        "fa": "برزیل",
+        "de": "Brasilien",
+        "es": "Brasil",
+        "fr": "Brésil",
+        "ja": "ブラジル",
+        "it": "Brasile",
+        "cn": "巴西"
+      },
+      "latitude": "-10.00000000",
+      "longitude": "-55.00000000",
+      "emoji": "🇧🇷",
+      "emojiU": "U+1F1E7 U+1F1F7"
+    },
+    {
+      "id": 32,
+      "name": "British Indian Ocean Territory",
+      "iso3": "IOT",
+      "iso2": "IO",
+      "numeric_code": "086",
+      "phone_code": "246",
+      "capital": "Diego Garcia",
+      "currency": "USD",
+      "currency_symbol": "$",
+      "tld": ".io",
+      "native": "British Indian Ocean Territory",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "timezones": [
+        {
+          "zoneName": "Indian/Chagos",
+          "gmtOffset": 21600,
+          "gmtOffsetName": "UTC+06:00",
+          "abbreviation": "IOT",
+          "tzName": "Indian Ocean Time"
+        }
+      ],
+      "translations": {
+        "kr": "영국령 인도양 지역",
+        "br": "Território Britânico do Oceano íÍdico",
+        "pt": "Território Britânico do Oceano Índico",
+        "nl": "Britse Gebieden in de Indische Oceaan",
+        "hr": "Britanski Indijskooceanski teritorij",
+        "fa": "قلمرو بریتانیا در اقیانوس هند",
+        "de": "Britisches Territorium im Indischen Ozean",
+        "es": "Territorio Británico del Océano Índico",
+        "fr": "Territoire britannique de l'océan Indien",
+        "ja": "イギリス領インド洋地域",
+        "it": "Territorio britannico dell'oceano indiano",
+        "cn": "英属印度洋领地"
+      },
+      "latitude": "-6.00000000",
+      "longitude": "71.50000000",
+      "emoji": "🇮🇴",
+      "emojiU": "U+1F1EE U+1F1F4"
+    },
+    {
+      "id": 33,
+      "name": "Brunei",
+      "iso3": "BRN",
+      "iso2": "BN",
+      "numeric_code": "096",
+      "phone_code": "673",
+      "capital": "Bandar Seri Begawan",
+      "currency": "BND",
+      "currency_symbol": "B$",
+      "tld": ".bn",
+      "native": "Negara Brunei Darussalam",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "timezones": [
+        {
+          "zoneName": "Asia/Brunei",
+          "gmtOffset": 28800,
+          "gmtOffsetName": "UTC+08:00",
+          "abbreviation": "BNT",
+          "tzName": "Brunei Darussalam Time"
+        }
+      ],
+      "translations": {
+        "kr": "브루나이",
+        "br": "Brunei",
+        "pt": "Brunei",
+        "nl": "Brunei",
+        "hr": "Brunej",
+        "fa": "برونئی",
+        "de": "Brunei",
+        "es": "Brunei",
+        "fr": "Brunei",
+        "ja": "ブルネイ・ダルサラーム",
+        "it": "Brunei",
+        "cn": "文莱"
+      },
+      "latitude": "4.50000000",
+      "longitude": "114.66666666",
+      "emoji": "🇧🇳",
+      "emojiU": "U+1F1E7 U+1F1F3"
+    },
+    {
+      "id": 34,
+      "name": "Bulgaria",
+      "iso3": "BGR",
+      "iso2": "BG",
+      "numeric_code": "100",
+      "phone_code": "359",
+      "capital": "Sofia",
+      "currency": "BGN",
+      "currency_symbol": "Лв.",
+      "tld": ".bg",
+      "native": "България",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "timezones": [
+        {
+          "zoneName": "Europe/Sofia",
+          "gmtOffset": 7200,
+          "gmtOffsetName": "UTC+02:00",
+          "abbreviation": "EET",
+          "tzName": "Eastern European Time"
+        }
+      ],
+      "translations": {
+        "kr": "불가리아",
+        "br": "Bulgária",
+        "pt": "Bulgária",
+        "nl": "Bulgarije",
+        "hr": "Bugarska",
+        "fa": "بلغارستان",
+        "de": "Bulgarien",
+        "es": "Bulgaria",
+        "fr": "Bulgarie",
+        "ja": "ブルガリア",
+        "it": "Bulgaria",
+        "cn": "保加利亚"
+      },
+      "latitude": "43.00000000",
+      "longitude": "25.00000000",
+      "emoji": "🇧🇬",
+      "emojiU": "U+1F1E7 U+1F1EC"
+    },
+    {
+      "id": 35,
+      "name": "Burkina Faso",
+      "iso3": "BFA",
+      "iso2": "BF",
+      "numeric_code": "854",
+      "phone_code": "226",
+      "capital": "Ouagadougou",
+      "currency": "XOF",
+      "currency_symbol": "CFA",
+      "tld": ".bf",
+      "native": "Burkina Faso",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Ouagadougou",
+          "gmtOffset": 0,
+          "gmtOffsetName": "UTC±00",
+          "abbreviation": "GMT",
+          "tzName": "Greenwich Mean Time"
+        }
+      ],
+      "translations": {
+        "kr": "부르키나 파소",
+        "br": "Burkina Faso",
+        "pt": "Burquina Faso",
+        "nl": "Burkina Faso",
+        "hr": "Burkina Faso",
+        "fa": "بورکینافاسو",
+        "de": "Burkina Faso",
+        "es": "Burkina Faso",
+        "fr": "Burkina Faso",
+        "ja": "ブルキナファソ",
+        "it": "Burkina Faso",
+        "cn": "布基纳法索"
+      },
+      "latitude": "13.00000000",
+      "longitude": "-2.00000000",
+      "emoji": "🇧🇫",
+      "emojiU": "U+1F1E7 U+1F1EB"
+    },
+    {
+      "id": 36,
+      "name": "Burundi",
+      "iso3": "BDI",
+      "iso2": "BI",
+      "numeric_code": "108",
+      "phone_code": "257",
+      "capital": "Bujumbura",
+      "currency": "BIF",
+      "currency_symbol": "FBu",
+      "tld": ".bi",
+      "native": "Burundi",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Bujumbura",
+          "gmtOffset": 7200,
+          "gmtOffsetName": "UTC+02:00",
+          "abbreviation": "CAT",
+          "tzName": "Central Africa Time"
+        }
+      ],
+      "translations": {
+        "kr": "부룬디",
+        "br": "Burundi",
+        "pt": "Burúndi",
+        "nl": "Burundi",
+        "hr": "Burundi",
+        "fa": "بوروندی",
+        "de": "Burundi",
+        "es": "Burundi",
+        "fr": "Burundi",
+        "ja": "ブルンジ",
+        "it": "Burundi",
+        "cn": "布隆迪"
+      },
+      "latitude": "-3.50000000",
+      "longitude": "30.00000000",
+      "emoji": "🇧🇮",
+      "emojiU": "U+1F1E7 U+1F1EE"
+    },
+    {
+      "id": 37,
+      "name": "Cambodia",
+      "iso3": "KHM",
+      "iso2": "KH",
+      "numeric_code": "116",
+      "phone_code": "855",
+      "capital": "Phnom Penh",
+      "currency": "KHR",
+      "currency_symbol": "KHR",
+      "tld": ".kh",
+      "native": "Kâmpŭchéa",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "timezones": [
+        {
+          "zoneName": "Asia/Phnom_Penh",
+          "gmtOffset": 25200,
+          "gmtOffsetName": "UTC+07:00",
+          "abbreviation": "ICT",
+          "tzName": "Indochina Time"
+        }
+      ],
+      "translations": {
+        "kr": "캄보디아",
+        "br": "Camboja",
+        "pt": "Camboja",
+        "nl": "Cambodja",
+        "hr": "Kambodža",
+        "fa": "کامبوج",
+        "de": "Kambodscha",
+        "es": "Camboya",
+        "fr": "Cambodge",
+        "ja": "カンボジア",
+        "it": "Cambogia",
+        "cn": "柬埔寨"
+      },
+      "latitude": "13.00000000",
+      "longitude": "105.00000000",
+      "emoji": "🇰🇭",
+      "emojiU": "U+1F1F0 U+1F1ED"
+    },
+    {
+      "id": 38,
+      "name": "Cameroon",
+      "iso3": "CMR",
+      "iso2": "CM",
+      "numeric_code": "120",
+      "phone_code": "237",
+      "capital": "Yaounde",
+      "currency": "XAF",
+      "currency_symbol": "FCFA",
+      "tld": ".cm",
+      "native": "Cameroon",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Douala",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "WAT",
+          "tzName": "West Africa Time"
+        }
+      ],
+      "translations": {
+        "kr": "카메룬",
+        "br": "Camarões",
+        "pt": "Camarões",
+        "nl": "Kameroen",
+        "hr": "Kamerun",
+        "fa": "کامرون",
+        "de": "Kamerun",
+        "es": "Camerún",
+        "fr": "Cameroun",
+        "ja": "カメルーン",
+        "it": "Camerun",
+        "cn": "喀麦隆"
+      },
+      "latitude": "6.00000000",
+      "longitude": "12.00000000",
+      "emoji": "🇨🇲",
+      "emojiU": "U+1F1E8 U+1F1F2"
+    },
+    {
+      "id": 39,
+      "name": "Canada",
+      "iso3": "CAN",
+      "iso2": "CA",
+      "numeric_code": "124",
+      "phone_code": "1",
+      "capital": "Ottawa",
+      "currency": "CAD",
+      "currency_symbol": "$",
+      "tld": ".ca",
+      "native": "Canada",
+      "region": "Americas",
+      "subregion": "Northern America",
+      "timezones": [
+        {
+          "zoneName": "America/Atikokan",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "EST",
+          "tzName": "Eastern Standard Time (North America)"
+        },
+        {
+          "zoneName": "America/Blanc-Sablon",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        },
+        {
+          "zoneName": "America/Cambridge_Bay",
+          "gmtOffset": -25200,
+          "gmtOffsetName": "UTC-07:00",
+          "abbreviation": "MST",
+          "tzName": "Mountain Standard Time (North America)"
+        },
+        {
+          "zoneName": "America/Creston",
+          "gmtOffset": -25200,
+          "gmtOffsetName": "UTC-07:00",
+          "abbreviation": "MST",
+          "tzName": "Mountain Standard Time (North America)"
+        },
+        {
+          "zoneName": "America/Dawson",
+          "gmtOffset": -25200,
+          "gmtOffsetName": "UTC-07:00",
+          "abbreviation": "MST",
+          "tzName": "Mountain Standard Time (North America)"
+        },
+        {
+          "zoneName": "America/Dawson_Creek",
+          "gmtOffset": -25200,
+          "gmtOffsetName": "UTC-07:00",
+          "abbreviation": "MST",
+          "tzName": "Mountain Standard Time (North America)"
+        },
+        {
+          "zoneName": "America/Edmonton",
+          "gmtOffset": -25200,
+          "gmtOffsetName": "UTC-07:00",
+          "abbreviation": "MST",
+          "tzName": "Mountain Standard Time (North America)"
+        },
+        {
+          "zoneName": "America/Fort_Nelson",
+          "gmtOffset": -25200,
+          "gmtOffsetName": "UTC-07:00",
+          "abbreviation": "MST",
+          "tzName": "Mountain Standard Time (North America)"
+        },
+        {
+          "zoneName": "America/Glace_Bay",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        },
+        {
+          "zoneName": "America/Goose_Bay",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        },
+        {
+          "zoneName": "America/Halifax",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        },
+        {
+          "zoneName": "America/Inuvik",
+          "gmtOffset": -25200,
+          "gmtOffsetName": "UTC-07:00",
+          "abbreviation": "MST",
+          "tzName": "Mountain Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Iqaluit",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "EST",
+          "tzName": "Eastern Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Moncton",
+          "gmtOffset": -14400,
+          "gmtOffsetName": "UTC-04:00",
+          "abbreviation": "AST",
+          "tzName": "Atlantic Standard Time"
+        },
+        {
+          "zoneName": "America/Nipigon",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "EST",
+          "tzName": "Eastern Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Pangnirtung",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "EST",
+          "tzName": "Eastern Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Rainy_River",
+          "gmtOffset": -21600,
+          "gmtOffsetName": "UTC-06:00",
+          "abbreviation": "CST",
+          "tzName": "Central Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Rankin_Inlet",
+          "gmtOffset": -21600,
+          "gmtOffsetName": "UTC-06:00",
+          "abbreviation": "CST",
+          "tzName": "Central Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Regina",
+          "gmtOffset": -21600,
+          "gmtOffsetName": "UTC-06:00",
+          "abbreviation": "CST",
+          "tzName": "Central Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Resolute",
+          "gmtOffset": -21600,
+          "gmtOffsetName": "UTC-06:00",
+          "abbreviation": "CST",
+          "tzName": "Central Standard Time (North America"
+        },
+        {
+          "zoneName": "America/St_Johns",
+          "gmtOffset": -12600,
+          "gmtOffsetName": "UTC-03:30",
+          "abbreviation": "NST",
+          "tzName": "Newfoundland Standard Time"
+        },
+        {
+          "zoneName": "America/Swift_Current",
+          "gmtOffset": -21600,
+          "gmtOffsetName": "UTC-06:00",
+          "abbreviation": "CST",
+          "tzName": "Central Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Thunder_Bay",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "EST",
+          "tzName": "Eastern Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Toronto",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "EST",
+          "tzName": "Eastern Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Vancouver",
+          "gmtOffset": -28800,
+          "gmtOffsetName": "UTC-08:00",
+          "abbreviation": "PST",
+          "tzName": "Pacific Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Whitehorse",
+          "gmtOffset": -25200,
+          "gmtOffsetName": "UTC-07:00",
+          "abbreviation": "MST",
+          "tzName": "Mountain Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Winnipeg",
+          "gmtOffset": -21600,
+          "gmtOffsetName": "UTC-06:00",
+          "abbreviation": "CST",
+          "tzName": "Central Standard Time (North America"
+        },
+        {
+          "zoneName": "America/Yellowknife",
+          "gmtOffset": -25200,
+          "gmtOffsetName": "UTC-07:00",
+          "abbreviation": "MST",
+          "tzName": "Mountain Standard Time (North America"
+        }
+      ],
+      "translations": {
+        "kr": "캐나다",
+        "br": "Canadá",
+        "pt": "Canadá",
+        "nl": "Canada",
+        "hr": "Kanada",
+        "fa": "کانادا",
+        "de": "Kanada",
+        "es": "Canadá",
+        "fr": "Canada",
+        "ja": "カナダ",
+        "it": "Canada",
+        "cn": "加拿大"
+      },
+      "latitude": "60.00000000",
+      "longitude": "-95.00000000",
+      "emoji": "🇨🇦",
+      "emojiU": "U+1F1E8 U+1F1E6"
+    },
+    {
+      "id": 40,
+      "name": "Cape Verde",
+      "iso3": "CPV",
+      "iso2": "CV",
+      "numeric_code": "132",
+      "phone_code": "238",
+      "capital": "Praia",
+      "currency": "CVE",
+      "currency_symbol": "$",
+      "tld": ".cv",
+      "native": "Cabo Verde",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "timezones": [
+        {
+          "zoneName": "Atlantic/Cape_Verde",
+          "gmtOffset": -3600,
+          "gmtOffsetName": "UTC-01:00",
+          "abbreviation": "CVT",
+          "tzName": "Cape Verde Time"
+        }
+      ],
+      "translations": {
+        "kr": "카보베르데",
+        "br": "Cabo Verde",
+        "pt": "Cabo Verde",
+        "nl": "Kaapverdië",
+        "hr": "Zelenortska Republika",
+        "fa": "کیپ ورد",
+        "de": "Kap Verde",
+        "es": "Cabo Verde",
+        "fr": "Cap Vert",
+        "ja": "カーボベルデ",
+        "it": "Capo Verde",
+        "cn": "佛得角"
+      },
+      "latitude": "16.00000000",
+      "longitude": "-24.00000000",
+      "emoji": "🇨🇻",
+      "emojiU": "U+1F1E8 U+1F1FB"
+    },
+    {
+      "id": 41,
+      "name": "Cayman Islands",
+      "iso3": "CYM",
+      "iso2": "KY",
+      "numeric_code": "136",
+      "phone_code": "+1-345",
+      "capital": "George Town",
+      "currency": "KYD",
+      "currency_symbol": "$",
+      "tld": ".ky",
+      "native": "Cayman Islands",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "timezones": [
+        {
+          "zoneName": "America/Cayman",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "EST",
+          "tzName": "Eastern Standard Time (North America"
+        }
+      ],
+      "translations": {
+        "kr": "케이먼 제도",
+        "br": "Ilhas Cayman",
+        "pt": "Ilhas Caimão",
+        "nl": "Caymaneilanden",
+        "hr": "Kajmanski otoci",
+        "fa": "جزایر کیمن",
+        "de": "Kaimaninseln",
+        "es": "Islas Caimán",
+        "fr": "Îles Caïmans",
+        "ja": "ケイマン諸島",
+        "it": "Isole Cayman",
+        "cn": "开曼群岛"
+      },
+      "latitude": "19.50000000",
+      "longitude": "-80.50000000",
+      "emoji": "🇰🇾",
+      "emojiU": "U+1F1F0 U+1F1FE"
+    },
+    {
+      "id": 42,
+      "name": "Central African Republic",
+      "iso3": "CAF",
+      "iso2": "CF",
+      "numeric_code": "140",
+      "phone_code": "236",
+      "capital": "Bangui",
+      "currency": "XAF",
+      "currency_symbol": "FCFA",
+      "tld": ".cf",
+      "native": "Ködörösêse tî Bêafrîka",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Bangui",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "WAT",
+          "tzName": "West Africa Time"
+        }
+      ],
+      "translations": {
+        "kr": "중앙아프리카 공화국",
+        "br": "República Centro-Africana",
+        "pt": "República Centro-Africana",
+        "nl": "Centraal-Afrikaanse Republiek",
+        "hr": "Srednjoafrička Republika",
+        "fa": "جمهوری آفریقای مرکزی",
+        "de": "Zentralafrikanische Republik",
+        "es": "República Centroafricana",
+        "fr": "République centrafricaine",
+        "ja": "中央アフリカ共和国",
+        "it": "Repubblica Centrafricana",
+        "cn": "中非"
+      },
+      "latitude": "7.00000000",
+      "longitude": "21.00000000",
+      "emoji": "🇨🇫",
+      "emojiU": "U+1F1E8 U+1F1EB"
+    },
+    {
+      "id": 43,
+      "name": "Chad",
+      "iso3": "TCD",
+      "iso2": "TD",
+      "numeric_code": "148",
+      "phone_code": "235",
+      "capital": "N'Djamena",
+      "currency": "XAF",
+      "currency_symbol": "FCFA",
+      "tld": ".td",
+      "native": "Tchad",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Ndjamena",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "WAT",
+          "tzName": "West Africa Time"
+        }
+      ],
+      "translations": {
+        "kr": "차드",
+        "br": "Chade",
+        "pt": "Chade",
+        "nl": "Tsjaad",
+        "hr": "Čad",
+        "fa": "چاد",
+        "de": "Tschad",
+        "es": "Chad",
+        "fr": "Tchad",
+        "ja": "チャド",
+        "it": "Ciad",
+        "cn": "乍得"
+      },
+      "latitude": "15.00000000",
+      "longitude": "19.00000000",
+      "emoji": "🇹🇩",
+      "emojiU": "U+1F1F9 U+1F1E9"
+    },
+    {
+      "id": 44,
+      "name": "Chile",
+      "iso3": "CHL",
+      "iso2": "CL",
+      "numeric_code": "152",
+      "phone_code": "56",
+      "capital": "Santiago",
+      "currency": "CLP",
+      "currency_symbol": "$",
+      "tld": ".cl",
+      "native": "Chile",
+      "region": "Americas",
+      "subregion": "South America",
+      "timezones": [
+        {
+          "zoneName": "America/Punta_Arenas",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "CLST",
+          "tzName": "Chile Summer Time"
+        },
+        {
+          "zoneName": "America/Santiago",
+          "gmtOffset": -10800,
+          "gmtOffsetName": "UTC-03:00",
+          "abbreviation": "CLST",
+          "tzName": "Chile Summer Time"
+        },
+        {
+          "zoneName": "Pacific/Easter",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "EASST",
+          "tzName": "Easter Island Summer Time"
+        }
+      ],
+      "translations": {
+        "kr": "칠리",
+        "br": "Chile",
+        "pt": "Chile",
+        "nl": "Chili",
+        "hr": "Čile",
+        "fa": "شیلی",
+        "de": "Chile",
+        "es": "Chile",
+        "fr": "Chili",
+        "ja": "チリ",
+        "it": "Cile",
+        "cn": "智利"
+      },
+      "latitude": "-30.00000000",
+      "longitude": "-71.00000000",
+      "emoji": "🇨🇱",
+      "emojiU": "U+1F1E8 U+1F1F1"
+    },
+    {
+      "id": 45,
+      "name": "China",
+      "iso3": "CHN",
+      "iso2": "CN",
+      "numeric_code": "156",
+      "phone_code": "86",
+      "capital": "Beijing",
+      "currency": "CNY",
+      "currency_symbol": "¥",
+      "tld": ".cn",
+      "native": "中国",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "timezones": [
+        {
+          "zoneName": "Asia/Shanghai",
+          "gmtOffset": 28800,
+          "gmtOffsetName": "UTC+08:00",
+          "abbreviation": "CST",
+          "tzName": "China Standard Time"
+        },
+        {
+          "zoneName": "Asia/Urumqi",
+          "gmtOffset": 21600,
+          "gmtOffsetName": "UTC+06:00",
+          "abbreviation": "XJT",
+          "tzName": "China Standard Time"
+        }
+      ],
+      "translations": {
+        "kr": "중국",
+        "br": "China",
+        "pt": "China",
+        "nl": "China",
+        "hr": "Kina",
+        "fa": "چین",
+        "de": "China",
+        "es": "China",
+        "fr": "Chine",
+        "ja": "中国",
+        "it": "Cina",
+        "cn": "中国"
+      },
+      "latitude": "35.00000000",
+      "longitude": "105.00000000",
+      "emoji": "🇨🇳",
+      "emojiU": "U+1F1E8 U+1F1F3"
+    },
+    {
+      "id": 46,
+      "name": "Christmas Island",
+      "iso3": "CXR",
+      "iso2": "CX",
+      "numeric_code": "162",
+      "phone_code": "61",
+      "capital": "Flying Fish Cove",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "tld": ".cx",
+      "native": "Christmas Island",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "timezones": [
+        {
+          "zoneName": "Indian/Christmas",
+          "gmtOffset": 25200,
+          "gmtOffsetName": "UTC+07:00",
+          "abbreviation": "CXT",
+          "tzName": "Christmas Island Time"
+        }
+      ],
+      "translations": {
+        "kr": "크리스마스 섬",
+        "br": "Ilha Christmas",
+        "pt": "Ilha do Natal",
+        "nl": "Christmaseiland",
+        "hr": "Božićni otok",
+        "fa": "جزیره کریسمس",
+        "de": "Weihnachtsinsel",
+        "es": "Isla de Navidad",
+        "fr": "Île Christmas",
+        "ja": "クリスマス島",
+        "it": "Isola di Natale",
+        "cn": "圣诞岛"
+      },
+      "latitude": "-10.50000000",
+      "longitude": "105.66666666",
+      "emoji": "🇨🇽",
+      "emojiU": "U+1F1E8 U+1F1FD"
+    },
+    {
+      "id": 47,
+      "name": "Cocos (Keeling) Islands",
+      "iso3": "CCK",
+      "iso2": "CC",
+      "numeric_code": "166",
+      "phone_code": "61",
+      "capital": "West Island",
+      "currency": "AUD",
+      "currency_symbol": "$",
+      "tld": ".cc",
+      "native": "Cocos (Keeling) Islands",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "timezones": [
+        {
+          "zoneName": "Indian/Cocos",
+          "gmtOffset": 23400,
+          "gmtOffsetName": "UTC+06:30",
+          "abbreviation": "CCT",
+          "tzName": "Cocos Islands Time"
+        }
+      ],
+      "translations": {
+        "kr": "코코스 제도",
+        "br": "Ilhas Cocos",
+        "pt": "Ilhas dos Cocos",
+        "nl": "Cocoseilanden",
+        "hr": "Kokosovi Otoci",
+        "fa": "جزایر کوکوس",
+        "de": "Kokosinseln",
+        "es": "Islas Cocos o Islas Keeling",
+        "fr": "Îles Cocos",
+        "ja": "ココス（キーリング）諸島",
+        "it": "Isole Cocos e Keeling",
+        "cn": "科科斯（基林）群岛"
+      },
+      "latitude": "-12.50000000",
+      "longitude": "96.83333333",
+      "emoji": "🇨🇨",
+      "emojiU": "U+1F1E8 U+1F1E8"
+    },
+    {
+      "id": 48,
+      "name": "Colombia",
+      "iso3": "COL",
+      "iso2": "CO",
+      "numeric_code": "170",
+      "phone_code": "57",
+      "capital": "Bogota",
+      "currency": "COP",
+      "currency_symbol": "$",
+      "tld": ".co",
+      "native": "Colombia",
+      "region": "Americas",
+      "subregion": "South America",
+      "timezones": [
+        {
+          "zoneName": "America/Bogota",
+          "gmtOffset": -18000,
+          "gmtOffsetName": "UTC-05:00",
+          "abbreviation": "COT",
+          "tzName": "Colombia Time"
+        }
+      ],
+      "translations": {
+        "kr": "콜롬비아",
+        "br": "Colômbia",
+        "pt": "Colômbia",
+        "nl": "Colombia",
+        "hr": "Kolumbija",
+        "fa": "کلمبیا",
+        "de": "Kolumbien",
+        "es": "Colombia",
+        "fr": "Colombie",
+        "ja": "コロンビア",
+        "it": "Colombia",
+        "cn": "哥伦比亚"
+      },
+      "latitude": "4.00000000",
+      "longitude": "-72.00000000",
+      "emoji": "🇨🇴",
+      "emojiU": "U+1F1E8 U+1F1F4"
+    },
+    {
+      "id": 49,
+      "name": "Comoros",
+      "iso3": "COM",
+      "iso2": "KM",
+      "numeric_code": "174",
+      "phone_code": "269",
+      "capital": "Moroni",
+      "currency": "KMF",
+      "currency_symbol": "CF",
+      "tld": ".km",
+      "native": "Komori",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "timezones": [
+        {
+          "zoneName": "Indian/Comoro",
+          "gmtOffset": 10800,
+          "gmtOffsetName": "UTC+03:00",
+          "abbreviation": "EAT",
+          "tzName": "East Africa Time"
+        }
+      ],
+      "translations": {
+        "kr": "코모로",
+        "br": "Comores",
+        "pt": "Comores",
+        "nl": "Comoren",
+        "hr": "Komori",
+        "fa": "کومور",
+        "de": "Union der Komoren",
+        "es": "Comoras",
+        "fr": "Comores",
+        "ja": "コモロ",
+        "it": "Comore",
+        "cn": "科摩罗"
+      },
+      "latitude": "-12.16666666",
+      "longitude": "44.25000000",
+      "emoji": "🇰🇲",
+      "emojiU": "U+1F1F0 U+1F1F2"
+    },
+    {
+      "id": 50,
+      "name": "Congo",
+      "iso3": "COG",
+      "iso2": "CG",
+      "numeric_code": "178",
+      "phone_code": "242",
+      "capital": "Brazzaville",
+      "currency": "XAF",
+      "currency_symbol": "FC",
+      "tld": ".cg",
+      "native": "République du Congo",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "timezones": [
+        {
+          "zoneName": "Africa/Brazzaville",
+          "gmtOffset": 3600,
+          "gmtOffsetName": "UTC+01:00",
+          "abbreviation": "WAT",
+          "tzName": "West Africa Time"
+        }
+      ],
+      "translations": {
+        "kr": "콩고",
+        "br": "Congo",
+        "pt": "Congo",
+        "nl": "Congo [Republiek]",
+        "hr": "Kongo",
+        "fa": "کنگو",
+        "de": "Kongo",
+        "es": "Congo",
+        "fr": "Congo",
+        "ja": "コンゴ共和国",
+        "it": "Congo",
+        "cn": "刚果"
+      },
+      "latitude": "-1.00000000",
+      "longitude": "15.00000000",
+      "emoji": "🇨🇬",
+      "emojiU": "U+1F1E8 U+1F1EC"
+    },
+    {
+      "id": 52,
+      "name": "Cook Islands",
+      "iso3": "COK",
+      "iso2": "CK",
+      "numeric_code": "184",
+      "phone_code": "682",
+      "capital": "Avarua",
+      "currency": "NZD",
+      "currency_symbol": "$",
+      "tld": ".ck",
+      "native": "Cook Islands",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "timezones": [
+        {
+          "zoneName": "Pacific/Rarotonga",
+          "gmtOffset": -36000,
+          "gmtOffsetName": "UTC-10:00",
+          "abbreviation": "CKT",
+          "tzName": "Cook Island Time"
+        }
+      ],
+      "translations": {
+        "kr": "쿡 제도",
+        "br": "Ilhas Cook",
+        "pt": "Ilhas Cook",
+        "nl": "Cookeilanden",
+        "hr": "Cookovo Otočje",
+        "fa": "جزایر کوک",
+        "de": "Cookinseln",
+        "es": "Islas Cook",
+        "fr": "Îles Cook",
+        "ja": "クック諸島",
+        "it": "Isole Cook",
+        "cn": "库克群岛"
+      },
+      "latitude": "-21.23333333",
+      "longitude": "-159.76666666",
+      "emoji": "🇨🇰",
+      "emojiU": "U+1F1E8 U+1F1F0"
+    }
+  ]
+}
