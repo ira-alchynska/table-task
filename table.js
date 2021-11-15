@@ -21,7 +21,7 @@ export const refs = {
 };
 
 export let countries = [];
-let searchQuery = "";
+let limit = 5;
 let page = 1;
 
 fetchCountries()
@@ -32,8 +32,7 @@ fetchCountries()
   })
   .catch((error) => console.error(error));
 
-//function which is creating the header of table
-function createHeaders(columns) {
+function createTableHeader(columns) {
   //row of header
   const headersRow = document.createElement("div");
   headersRow.classList.add("header-row");
@@ -81,8 +80,8 @@ export function createHeaderCell(column) {
   return headerBorder;
 }
 
-//the function that creates body of table it takes array of columns and countries
-export function createDataRows(columns, countries) {
+//the function that creates body of table
+export function createTableRows(columns, countries) {
   // row in body table
   const rows = countries.map((country) => {
     const row = document.createElement("div");
@@ -120,11 +119,11 @@ export function createTable(columns, countries) {
 
   const tbody = document.createElement("div");
   tbody.classList.add("tbody");
-  const headerRow = createHeaders(columns);
+  const headerRow = createTableHeader(columns);
 
   const filterInput = createFilterRow();
 
-  const rows = createDataRows(columns, countries);
+  const rows = createTableRows(columns, countries);
 
   refs.wrapper.append(table);
   table.append(thead);
@@ -139,14 +138,14 @@ export function createTable(columns, countries) {
   addListenersSort();
   addListenerCheckbox();
   addListenersFilter();
-  addEventListenerHideColumns();
-  addEventListenerShowColumns();
-  addEventListenerOpenDropDown();
-  addEventListenerMakeAscSort();
-  addEventListenerMakeDescSort();
+  addListenerHideColumns();
+  addListenerShowColumns();
+  addListenerOpenDropDown();
+  addListenerMakeAscSort();
+  addListenerMakeDescSort();
   createDropDownList();
-  addEventListenerOnOpenModal();
-  addEventListenerOnCloseModal();
+  addListenerOnOpenModal();
+  addListenerOnCloseModal();
   //addEventListenerOnOverlayClose();
 }
 
@@ -172,7 +171,7 @@ function addListenersSort(order) {
 }
 
 //asc
-function addEventListenerMakeAscSort() {
+function addListenerMakeAscSort() {
   const headerColumn = document.querySelectorAll(".header-column");
   headerColumn.forEach((th) => {
     th.addEventListener("click", (event) => {
@@ -187,7 +186,7 @@ function addEventListenerMakeAscSort() {
 }
 
 //desc
-function addEventListenerMakeDescSort() {
+function addListenerMakeDescSort() {
   const headerColumn = document.querySelectorAll(".header-column");
   headerColumn.forEach((th) => {
     th.addEventListener("click", (event) => {
@@ -202,7 +201,7 @@ function addEventListenerMakeDescSort() {
 }
 
 //hide
-function addEventListenerHideColumns() {
+function addListenerHideColumns() {
   const headerColumn = document.querySelectorAll(".header-column");
   headerColumn.forEach((th) => {
     th.addEventListener("click", (event) => {
@@ -216,7 +215,7 @@ function addEventListenerHideColumns() {
 }
 
 //show
-function addEventListenerShowColumns() {
+function addListenerShowColumns() {
   const headerColumn = document.querySelectorAll(".header-column");
   headerColumn.forEach((th) => {
     th.addEventListener("click", (event) => {
@@ -230,7 +229,7 @@ function addEventListenerShowColumns() {
 }
 
 //drop down
-function addEventListenerOpenDropDown() {
+function addListenerOpenDropDown() {
   const headerColumn = document.querySelectorAll(".header-column");
   headerColumn.forEach((th) => {
     th.addEventListener("click", (event) => {
@@ -252,7 +251,7 @@ function onCloseModal() {
   modalRef.classList.add("modal-close");
 }
 
-function addEventListenerOnOpenModal() {
+function addListenerOnOpenModal() {
   const tbody = document.querySelector(".tbody");
   tbody.addEventListener("click", (e) => {
     let target = e.target;
@@ -267,12 +266,12 @@ function addEventListenerOnOpenModal() {
   });
 }
 
-function addEventListenerOnCloseModal() {
+function addListenerOnCloseModal() {
   const closeModal = document.querySelector(".btnCloseModal");
   closeModal.addEventListener("click", (e) => onCloseModal());
 }
 
-export function listenerFormData() {
+export function addListenerFormData() {
   const formRef = document.querySelector(".modal-form");
   formRef.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -283,11 +282,11 @@ export function listenerFormData() {
       submittedData[key] = value;
     });
     patchRequest(submittedData).then(() => {
-      fetchCountries(searchQuery, page).then((data) => {
+      fetchCountries(limit, page).then((data) => {
         countries = data;
         const tableBody = document.querySelector(".tbody");
         tableBody.innerHTML = "";
-        const rows = createDataRows(columns, countries);
+        const rows = createTableRows(columns, countries);
         tableBody.append(...rows);
       });
     });
@@ -303,13 +302,12 @@ createLoadMoreBtn();
 
 const loadMoreBtn = document.querySelector('[data-action="load-more"]');
 loadMoreBtn.addEventListener("click", () => {
-  fetchCountries(searchQuery, page).then((data) => {
+  fetchCountries(limit, page).then((data) => {
     countries = data;
     page += 1;
     console.log(countries);
     const tableBody = document.querySelector(".tbody");
-    //tableBody.innerHTML = "";
-    const rows = createDataRows(columns, countries);
+    const rows = createTableRows(columns, countries);
     tableBody.append(...rows);
   });
 });

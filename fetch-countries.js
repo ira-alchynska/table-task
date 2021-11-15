@@ -1,5 +1,5 @@
-export async function fetchCountries(searchQuery, page = 1) {
-  const BASE_URL = `http://localhost:3030/countries/?_limit=${searchQuery}&_page=${page}`;
+export async function fetchCountries(limit = 5, page = 1) {
+  const BASE_URL = `http://localhost:3030/countries/?_limit=${limit}&_page=${page}`;
 
   let response = await fetch(BASE_URL);
   let data = await response.json();
